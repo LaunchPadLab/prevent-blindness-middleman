@@ -8,3 +8,6 @@ This is a middleman site used to create static HTML/CSS for the preventblindness
 2. Install Ruby and Bundler if you don't already have them
 3. cd into repo and run ```bundle install```
 4. Start server: ```middleman server```
+
+## Build Site
+```middleman build```
