@@ -1,0 +1,22 @@
+//Page Header
+.page-header{
+  background-size: cover;
+
+  @include media($tablet){
+    height: 500px;
+    position: relative;
+  }
+
+  .header-text{
+    @include media($tablet){
+      @include vertical-center;
+    }
+  }
+
+  h1{ color: $white-base; }
+
+  .subheader{
+    color: $white-base;
+    @include s-medium;
+  }
+}

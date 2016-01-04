@@ -1,0 +1,252 @@
+// Site Navigation Styles
+// ========================================
+$mobile-nav-height: 58px;
+$desktop-nav-height: 83px;
+
+/*-----------------------
+Sub Nav
+-----------------------*/
+.sub-nav{
+  display: none;
+
+  @include media($tablet) {
+    background-color: $grey-lighter;
+    display: block;
+  }
+
+  .cruise-types-nav{
+    @include rem(padding, 5px 20px);
+    text-align: right;
+
+    li{
+      display: inline-block;
+      @include s-tiny;
+      @include rem(margin, 0 0 0 10px);
+
+      a{ color: $grey-base; }
+
+      &:not(:last-child):after{
+        color: $grey-base;
+        content: "/";
+        @include rem(margin, 0 0 0 10px);
+      }
+    }
+  }
+}
+
+/*-----------------------
+Logo
+-----------------------*/
+.logo{
+  @include rem(margin, 5px 0);
+  width: 140px;
+}
+
+/*-----------------------
+Primary Nav
+-----------------------*/
+.navigation{
+  background-color: $white-base;
+  //@include position(fixed, 0 null null null);
+  width: 100%;
+  z-index: 9999;
+  border-bottom: 1px solid $grey-light;
+
+  ul.navigation-menu{ text-align: right; }
+
+  li { @include rem(margin, 0 0 0 15px); }
+
+  .nav-link{
+    display: inline-block;
+    text-transform: uppercase;
+  }
+}
+
+.navigation .navigation-container{
+  @include rem(padding, 0 20px);
+  position: relative;
+}
+
+.nav-link .button{
+  @include rem(padding, 15px);
+  margin: 0;
+  color: $white-base;
+}
+
+.navigation-menu{
+  @include position(absolute, 30px 0px null null);
+  background-color: $white-base;
+  border-bottom: 1px solid $grey-light;
+  width: 100%;
+}
+
+/*-----------------------
+Mobile Nav
+-----------------------*/
+
+.page{
+  overflow-x: hidden;
+  position: relative;
+}
+
+.wrapper{
+  @include transition(ease 0.5s);
+  position: relative;
+  top: 0;
+
+  &.pushed{
+    @include transform(translateX(-100vw));
+  }
+}
+
+  .menuTrigger {
+    position: absolute;
+    right: 20px;
+    top: 0;
+    padding: 10px 10px;
+    background: #F15F48;
+    cursor: pointer;
+    color:#fff;
+    font-weight:bold;
+    }
+
+.panel  {
+  width: 100%;
+  background:#F8F7F2;
+
+  height:100%;
+  top: 0;
+  bottom: 0;
+  right: -100vw;
+  @include transition(ease 0.5s);
+  overflow:scroll;
+  @include media($mobile) {
+  position: fixed;
+}
+  @include media($tablet){
+    position: initial;
+    height: initial;
+    width: initial;
+    right: 0;
+  }
+}
+
+.subPanel {
+width: 100%;
+background:#F8F7F2;
+position: absolute;
+height:100%;
+top: 0;
+bottom: 0;
+right: -100vw;
+@include transition(ease 0.5s);
+overflow:scroll;
+}
+
+.panel{
+  z-index:10;
+  border-left:1px solid #F2F0E8;
+
+   @include media($tablet){
+      float: right;
+    }
+  }
+
+  .panel ul li{
+    //width: 180px;
+    padding:10px;
+    border-bottom: 1px solid #F2F0E8;
+    color:#F15F48;
+    cursor: pointer;
+
+      @include media($tablet){
+        display: inline-block;
+        padding:0;
+      }
+    }
+
+  .panel ul li:hover {
+    background: #F15F48;
+    color: #fff;
+    }
+
+    .panel ul li ul li{
+      color:#00B4AB;
+      }
+
+    .panel ul li ul li:hover{
+      background:#00B4AB;
+      color:#fff;
+      }
+
+
+  .panel.isOpen, .subPanel.isOpen {
+    @include transform(translateX(-100vw));
+  }
+
+.subPanel{
+  z-index:20;
+
+  .heading {
+    background: #F15F48;
+    color: #fff;
+    //font-weight:bold;
+  }
+}
+
+.closeSubPanel, .closePanel, .openSubPanel {
+cursor: pointer;
+}
+
+
+//added
+.openSubPanel{
+  position: relative;
+}
+
+//Hover Dropdown
+.hover-menu {
+  $submenu-width: 100vw;
+
+  overflow: visible;
+  padding-right: 0;
+
+    //position: relative;
+
+  .hover-menu-item {
+    left: 0;
+    position: relative;
+  }
+
+  .subPanel {
+      @include media($tablet){
+    display: none;
+    margin: 0;
+    padding-left: 0;
+      left: 0;
+        display: none;
+        position: absolute;
+    width: 100vw;
+    top: 107px;
+      }
+  }
+
+  .subPanel li {
+    display: block;
+    padding-right: 0;
+  }
+
+  .subPanel li a {
+    display: inline-block;
+    text-align: right;
+    width: 100%;
+
+      text-align: left;
+      width: $submenu-width;
+      }
+
+  &:focus > .subPanel,
+  &:hover > .subPanel {
+     @include media($tablet){ display: block; }
+  }
+}
