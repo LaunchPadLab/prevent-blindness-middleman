@@ -23,36 +23,31 @@ h5,
 h6 {
   font-style: normal;
   font-weight: normal;
-  @include font-type($primary-sans-serif, normal, 900);
+  @include font-type($primary-slab-serif, normal, 900);
   @include rem(margin-bottom, 12px);
   color: $black-base;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  text-transform: uppercase;
   letter-spacing: 1px;
   line-height: 1.1;
 }
 
 h1 { font-size: $font-size-base * 1.75; @include media($tablet){ font-size: $font-size-base * 4; } }
-h2 { font-size: $font-size-base * 2.00; @include media($tablet){ font-size: $font-size-base * 3.25; } }
-h3 { font-size: $font-size-base * 1.45; @include media($tablet){ font-size: $font-size-base * 2.50; } }
+h2 { font-size: $font-size-base * 2.00; @include media($tablet){ font-size: $font-size-base * 3.00; } }
+h3 { font-size: $font-size-base * 1.45; @include media($tablet){ font-size: $font-size-base * 2.25; } }
 h4 { font-size: $font-size-base * 1.25; @include media($tablet){ font-size: $font-size-base * 1.75; } }
 h5 { font-size: $font-size-base * 1.00; @include media($tablet){ font-size: $font-size-base * 1.25; } }
 h6 { font-size: $font-size-base - 2.00; @include media($tablet){ font-size: $font-size-base * 1.00; } }
-
-h3, h4, h5{
-  @include font-type($primary-sans-serif, normal, 700);
-  letter-spacing: 2px;
-}
 
 p {
   font-weight: normal;
   font-style: normal;
   @include font-type($primary-sans-serif, normal, normal);
-  @include s-small;
-  @include rem(margin-bottom, 12px);
-  line-height: $base-line-height;
-  color: $black-base;
+  @include s-base;
+  @include rem(margin-bottom, 16px);
+  line-height: 1.6;
+  color: $black-light;
+  letter-spacing: 0.25px;
 
   &:last-child { @include rem(margin-bottom, 0); }
 }
@@ -60,16 +55,17 @@ p {
 li,
 dd{
   @include font-type($primary-sans-serif, normal, normal);
-  @include rem(margin-top, 3px);
+  //@include rem(margin-top, 3px);
   line-height: $base-line-height;
   color: $black-base;
 }
 
 a {
-  @include font-type($primary-sans-serif, normal, normal);
+  @include font-type($primary-sans-serif, normal, $bold);
   @include transition(all 0.3s ease-in-out);
   text-decoration: none;
   color: $black-base;
+  @include s-medium;
 
   &:hover {
     color: $blue-dark;

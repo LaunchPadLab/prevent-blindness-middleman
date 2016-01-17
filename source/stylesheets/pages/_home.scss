@@ -1,0 +1,336 @@
+/*-----------------------
+Image Content
+-----------------------*/
+.left-header{
+  @include media($tablet){
+    @include span-columns(4 of 12);
+  }
+  img{ width: 80%; }
+}
+.description{
+  @include media($tablet){
+    @include span-columns(8 of 12);
+  }
+}
+
+.callout{
+  background-color: $white-light;
+  border-top: 1px solid $white-med;
+  display: inline-block;width: 100%;
+  vertical-align: middle;
+}
+
+/*-----------------------
+Link Index
+-----------------------*/
+.link-index-container{
+  h2{
+    border-bottom: 3px solid $magenta-base;
+    color: $magenta-base;
+    @include rem(margin-bottom, 15px);
+    @include rem(padding-bottom, 15px);
+  }
+
+  ul{
+    @include media($tablet){
+     @include columns(3);
+    }
+    li{ margin: 0; }
+
+    a{
+      display: inline-block;
+      @include rem(margin, 15px 0);
+      @include media($tablet){
+        //@include span-columns(4 of 12);
+        //@include omega(3n);
+      }
+    }
+  }
+}
+
+
+/*-----------------------
+Related Links
+-----------------------*/
+.related-links{
+  border-top: 1px solid $white-med;
+  display: inline-block;
+  width: 100%;
+
+  h5{
+    color: $grey-light;
+    @include media($tablet){
+      margin: 0;
+      @include span-columns(2 of 12);
+      @include rem(margin-top, 10px);
+    }
+  }
+
+  .related-links-container{
+    @include rem(padding, 20px);
+    @include media($tablet){ @include rem(padding, 40px 20px); }
+  }
+
+  ul{
+    display: inline-block;
+    @include media($tablet){ @include span-columns(10 of 12); }
+  }
+  li{
+    display: inline-block;
+    @include rem(margin, 0  10px 0 0);
+
+    a{ @include rem(margin, 5px 0px); }
+  }
+}
+
+
+
+
+.page-header {
+  background-color: $magenta-base;
+  position: relative;
+
+  @include media($tablet) { height: 500px; }
+
+  h1, p { color: $white-base; max-width: 600px; }
+
+  .image-block {
+    @include background-size(cover);
+    height:300px;
+    @include media($tablet) {
+      border-right: 5px solid white;
+      height: 100%;
+      @include position(absolute, 0 null 0 null);
+      width: 50%;
+    }
+  }
+
+  .text-container {
+      @include outer-container();
+      @include base-padding;
+
+    .text-block {
+      @include media($tablet) {
+        @include span-columns(5.5 of 12);
+        @include vertical-center;
+        //@include shift(6 of 12);
+        right:20px;
+      }
+
+      p { @include s-medium;}
+
+    }
+  }
+}
+
+.right-image{
+  .image-block {
+    @include media($tablet) {
+      border-left: 5px solid white;
+      border-right: none;
+      @include position(absolute, 0 0 0 null);
+    }
+  }
+
+ .text-block {
+    @include media($tablet) {
+      left:20px;
+      text-align: center;
+    }
+  }
+
+  .button-black-base{
+    background-color: rgba(0, 0, 0, 0.2);
+    border: none;
+    opacity: 0.5;
+
+    &:hover{
+      background-color: rgba(0, 0, 0, 0.3);
+      opacity: 1;
+    }
+  }
+}
+
+.subpage-header{
+  .image-block{
+    @include media($tablet) {
+      width: 70%;
+    }
+    .text-block{
+      @include media($tablet) {
+        right:inherit;
+      }
+    }
+  }
+}
+
+
+
+.arrow{
+  &:after{
+    content: "\2192";
+    display: inline-block;
+    @include rem(margin-left, 7px);
+  }
+}
+
+
+//Paragraph Block
+.paragraph-container{
+  @include media($tablet) {
+    @include span-columns(7 of 12);
+    @include shift(2.5);
+    //@include clearfix;
+  }
+}
+
+.secondary-links{
+  h4, a { color: $white-base; }
+
+  h4{
+    opacity: 0.5;
+    @include media($tablet){
+      border-bottom: 2px solid $white-base;
+      @include rem(padding-bottom, 15px);
+    }
+  }
+
+  a{
+    display: inline-block;
+    @include rem(margin, 8px 0);
+    opacity: 0.5;
+
+
+    @include media($tablet) { @include rem(margin, 10px 0 0 0); }
+
+    &:hover{
+      opacity: 1;
+    }
+  }
+
+  &.text-container .text-block{
+    @include media($tablet) {
+      width: 30%;
+      right: 0;
+      padding: 0 3%;
+    }
+  }
+}
+
+//Accordion
+.accordion {
+  ul.submenu {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.2);
+    @include rem(padding, 20px);
+
+    @include media($tablet) {
+      display: block;
+      background-color: transparent;
+      padding: 0;
+    }
+  }
+
+  .is-expanded {
+    display: block;
+  }
+
+  .js-accordion-trigger{
+    background-color: rgba(0, 0, 0, 0.2);
+    @include rem(padding, 20px);
+    width: 100%;
+    margin: 0;
+    position: relative;
+
+    @include media($tablet) { display: none; }
+
+    &:after{
+      content:"\25be";
+      display: block;
+      @include position(absolute, 20px 20px null null);
+      @include s-bigger;
+    }
+  }
+}
+
+
+//Featured Content
+.featured-content{
+  position: relative;
+
+  .image-block {
+    @include background-size(cover);
+    height:300px;
+    @include media($tablet) {
+      border-right: 5px solid white;
+      height: 100%;
+      @include position(absolute, 0 null 0 null);
+      width: 50%;
+    }
+  }
+}
+
+.feature-blocks{
+
+  @include media($tablet) {
+    margin-left: 50%;
+    width: 50%;
+  }
+
+  h4, p, a { color: $white-base; }
+
+  .feature-block{
+    position: relative;
+
+    &:first-child{
+      background-color: #48CBD9;
+      border-bottom: 5px solid $white-base;
+
+     @include media($tablet) {
+      border-right: 5px solid $white-base;
+      float: left;
+      width: 50%;
+      min-height: 250px;
+     }
+    }
+
+    &:nth-child(2){
+      background-color: #FF4F5C;
+      border-bottom: 5px solid $white-base;
+
+      @include media($tablet) {
+       float: left;
+       width: 50%;
+       min-height: 250px;
+      }
+    }
+
+    &:nth-child(3){
+      background-color: #363A42;
+
+      @include media($tablet) {
+      width: 100%;
+      display: inline-block;
+      min-height: 250px;
+      }
+    }
+
+    .feature-text{
+      @include rem(padding, 20px 20px 60px);
+
+      @include media($tablet) {
+        @include vertical-center;
+      }
+    }
+  }
+
+  a{
+    background-color: rgba(0, 0, 0, 0.2);
+    @include position(absolute, null 0px 0px 0px);
+    @include rem(padding, 12px 20px);
+    opacity: 0.5;
+    &:hover{
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+  }
+}

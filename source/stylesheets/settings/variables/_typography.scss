@@ -3,8 +3,8 @@
 
   // Font Families
 
-  $primary-sans-serif: 'Lato', sans-serif;
-
+  $primary-slab-serif: 'Roboto Slab', sans-serif;
+  $primary-sans-serif: 'Roboto Condensed', sans-serif;
 
   // Sizes
   $font-size-base: 14px;
@@ -17,9 +17,10 @@
   $s-bigger:  22px;
   $s-big:     18px;
   $s-medium:  16px;
-  $s-base: $font-size-base;
-  $s-small:   12px;
-  $s-tiny:    10px;
+  $s-base:    17px;
+  $s-small:   14px;
+  $s-tiny:    12px;
+  $s-xtiny:   10px;
 
   // Line Heights
   $base-line-height: $font-size-base * 1.5;

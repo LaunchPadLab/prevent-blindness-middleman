@@ -2,17 +2,16 @@
 // ========================================
 
 // Main Button
-.button{
+@mixin button{
   @include font-type($primary-sans-serif, normal, $bold);
-  @include rem(padding, 10px 12px);
+  @include rem(padding, 8px 20px);
   @include rem(margin, 5px 0 1px);
   @include transition (all 0.3s ease-in-out);
-  border: 1px solid $white-base;
+  //border: 1px solid $white-base;
   display: inline-block;
   line-height: normal;
-  text-transform: uppercase;
   @include s-small;
-  letter-spacing: 3px;
+  border-radius: 20em;
 
   text{
     align: center;
@@ -50,6 +49,7 @@
   $hover-color: nth($button, 6);
 
   .button-#{$type}{
+    @include button;
     background: $bg-1;
     border: 1px solid $border;
     color: $color;

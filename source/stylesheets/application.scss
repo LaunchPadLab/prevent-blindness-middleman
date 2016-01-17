@@ -14,7 +14,7 @@
 
 
 // Components List
-//@import "components/buttons";
+@import "components/buttons";
 @import "components/footer";
 @import "components/forms";
 @import "components/navigation";
@@ -23,3 +23,4 @@
 //@import "components/modal";
 
 // Page Styles
+@import "pages/home";

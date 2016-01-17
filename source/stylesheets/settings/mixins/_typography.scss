@@ -48,6 +48,11 @@
   @include rem(line-height, $base-line-small);
 }
 
+@mixin s-xtiny{
+  @include rem(font-size, $s-xtiny);
+  @include rem(line-height, $base-line-small);
+}
+
 
 // Font Styles
 @mixin font-type($type, $style, $weight){

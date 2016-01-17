@@ -4,7 +4,10 @@
   @include outer-container;
 }
 
+footer{ clear: both; }
+
 .footer-container{
+
   @include rem(padding, 25px 20px);
 
   @include media($tablet){
@@ -41,7 +44,7 @@
       @include rem(margin, 0 20px 0 0);
       @include s-tiny;
       @include transition();
-      opacity: 0.8;
+      opacity: 0.4;
 
       &:hover { opacity: 1; }
     }
@@ -59,7 +62,7 @@
 
   p, a {
     @include rem(margin, 0);
-    @include s-tiny;
+    @include s-xtiny;
     color: $white-base;
     opacity: 0.4;
   }
