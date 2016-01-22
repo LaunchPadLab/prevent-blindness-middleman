@@ -29,50 +29,66 @@ h6 {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   letter-spacing: 1px;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
-h1 { font-size: $font-size-base * 1.75; @include media($tablet){ font-size: $font-size-base * 4; } }
+h1 {
+  font-size: $font-size-base * 1.75;
+  @include media($tablet) { font-size: $font-size-base * 2.50; }
+  @include media($tablet-landscape) { font-size: $font-size-base * 4.00; }
+}
+
 h2 { font-size: $font-size-base * 2.00; @include media($tablet){ font-size: $font-size-base * 3.00; } }
-h3 { font-size: $font-size-base * 1.45; @include media($tablet){ font-size: $font-size-base * 2.25; } }
-h4 { font-size: $font-size-base * 1.25; @include media($tablet){ font-size: $font-size-base * 1.75; } }
-h5 { font-size: $font-size-base * 1.00; @include media($tablet){ font-size: $font-size-base * 1.25; } }
+h3 { font-size: $font-size-base * 1.45; @include media($tablet){ font-size: $font-size-base * 2.00; } }
+h4 { font-size: $font-size-base * 1.35; @include media($tablet){ font-size: $font-size-base * 1.75; } }
+h5 { font-size: $font-size-base * 1.15; @include media($tablet){ font-size: $font-size-base * 1.25; } }
 h6 { font-size: $font-size-base - 2.00; @include media($tablet){ font-size: $font-size-base * 1.00; } }
 
 p {
   font-weight: normal;
   font-style: normal;
   @include font-type($primary-sans-serif, normal, normal);
-  @include s-base;
+  @include s-small;
   @include rem(margin-bottom, 16px);
   line-height: 1.6;
   color: $black-light;
   letter-spacing: 0.25px;
 
   &:last-child { @include rem(margin-bottom, 0); }
+
+   @include media($tablet) {  @include s-base; }
 }
 
 li,
 dd{
   @include font-type($primary-sans-serif, normal, normal);
-  //@include rem(margin-top, 3px);
   line-height: $base-line-height;
   color: $black-base;
+  line-height: 1.6;
+  color: $black-light;
+  list-style: disc;
+  @include rem(margin-left, 20px);
+
+  @include media($tablet) {  @include s-base; }
+}
+
+ul{
+  @include rem(margin-bottom, 15px);
+  //display: inline-block;
+  //width: 100%;
 }
 
 a {
   @include font-type($primary-sans-serif, normal, $bold);
   @include transition(all 0.3s ease-in-out);
   text-decoration: none;
-  color: $black-base;
+  color: $grey-base;
   @include s-medium;
 
   &:hover {
-    color: $blue-dark;
+    color: $black-dark;
     text-decoration: none;
   }
-
-  //&.underline:hover { border-bottom: 1px solid $blue-base;}
 
   &:active,
   &:focus {
@@ -80,5 +96,5 @@ a {
   }
 }
 
-strong { @include font-type($primary-sans-serif, normal, 300); }
+strong, b { @include font-type($primary-sans-serif, normal, $bold); }
 i, em { font-style: italic; font-weight: 200; }

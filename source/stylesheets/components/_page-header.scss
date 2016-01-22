@@ -7,6 +7,10 @@
     position: relative;
   }
 
+  @include media($tablet-landscape) {
+    margin-top: $desktop-nav-height;
+  }
+
   .header-text{
     @include media($tablet){
       @include vertical-center;
@@ -21,3 +25,111 @@
   }
 }
 
+
+
+/*-----------------------
+Page Header
+-----------------------*/
+
+.page-header {
+  background-color: $magenta-base;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+  @include media($tablet) { height: 500px; }
+
+  h1, p { color: $white-base; max-width: 600px; }
+
+  .image-block {
+    @include background-size(cover);
+    height:300px;
+    @include media($tablet) {
+      border-right: 5px solid white;
+      height: 100%;
+      @include position(absolute, 0 null 0 null);
+      width: 50%;
+    }
+  }
+
+  .text-container {
+      @include outer-container();
+      @include base-padding;
+      z-index:2;
+
+    .text-block {
+      @include media($tablet) {
+        @include span-columns(5.5 of 12);
+        @include vertical-center;
+        //@include shift(6 of 12);
+        right:20px;
+      }
+
+      p { @include s-medium;}
+
+    }
+  }
+}
+
+.right-image{
+  .image-block {
+    @include media($tablet) {
+      border-left: 5px solid white;
+      border-right: none;
+      @include position(absolute, 0 0 0 null);
+    }
+  }
+
+ .text-block {
+    @include media($tablet) {
+      left:20px;
+      text-align: center;
+    }
+  }
+
+  .button-black-base{
+    background-color: rgba(0, 0, 0, 0.2);
+    border: none;
+    opacity: 0.5;
+
+    &:hover{
+      background-color: rgba(0, 0, 0, 0.3);
+      opacity: 1;
+    }
+  }
+}
+
+.subpage-header{
+  .image-block{
+    @include media($tablet) {
+      width: 70%;
+    }
+    .text-block{
+      @include media($tablet) {
+        right:inherit;
+      }
+    }
+  }
+}
+
+
+/*-----------------------
+Video Header
+-----------------------*/
+video{
+  display: none;
+
+  @include media($tablet) {
+    display: block;
+    width: 100%;
+  }
+}
+
+.overlay{
+  background-color: $black-dark;
+  display: block;
+  height: 100%;
+  @include position(absolute, 0px 0px 0px 0px);
+  opacity: 0.4;
+  width: 100%;
+}

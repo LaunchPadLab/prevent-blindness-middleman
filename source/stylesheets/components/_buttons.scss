@@ -13,6 +13,8 @@
   @include s-small;
   border-radius: 20em;
 
+  @include media($tablet){ min-width: 150px; text-align: center; }
+
   text{
     align: center;
     decoration: none;
@@ -76,12 +78,8 @@
     @include s-small;
     @include font-type($primary-sans-serif, normal, 600);
     color: $bg-1;
-    text-transform: uppercase;
     @include transition(all 0.3s ease-in-out);
-    border-bottom: 2px solid $bg-1;
     @include rem(padding-bottom, 3px);
-    letter-spacing: 2px;
-    @include rem(margin-top, 15px);
     display: inline-block;
 
     &:hover{

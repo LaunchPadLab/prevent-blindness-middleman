@@ -5,19 +5,32 @@ Image Content
   @include media($tablet){
     @include span-columns(4 of 12);
   }
-  img{ width: 80%; }
+
+  img{
+    @include rem(margin-bottom, 30px);
+    width: 80%;
+    @include media($tablet){ @include rem(margin-bottom, 0); }
+  }
 }
 .description{
   @include media($tablet){
     @include span-columns(8 of 12);
   }
+
+  .link-block{
+    a{ @include rem(margin-right, 10px); }
+  }
 }
 
+/*-----------------------
+Callout
+-----------------------*/
 .callout{
   background-color: $white-light;
   border-top: 1px solid $white-med;
-  display: inline-block;width: 100%;
+  display: inline-block;
   vertical-align: middle;
+  width: 100%;
 }
 
 /*-----------------------
@@ -79,26 +92,31 @@ Related Links
     display: inline-block;
     @include rem(margin, 0  10px 0 0);
 
-    a{ @include rem(margin, 5px 0px); }
+    a{
+      @include rem(margin, 5px 0px);
+      @include s-tiny;
+      @include media($tablet){ @include s-small; }
+    }
   }
 }
 
 
+/*-----------------------
+Page Header
+-----------------------*/
 
-
-.page-header {
-  background-color: $magenta-base;
+.page-callout {
+  background-color: $white-light;
   position: relative;
 
-  @include media($tablet) { height: 500px; }
+  @include media($tablet) { min-height: 100px; }
 
-  h1, p { color: $white-base; max-width: 600px; }
+  h4, p { text-align: left; max-width: 600px; }
+  h4 a{ @include font-type($primary-slab-serif, normal, 900); }
 
   .image-block {
     @include background-size(cover);
-    height:300px;
     @include media($tablet) {
-      border-right: 5px solid white;
       height: 100%;
       @include position(absolute, 0 null 0 null);
       width: 50%;
@@ -111,10 +129,11 @@ Related Links
 
     .text-block {
       @include media($tablet) {
-        @include span-columns(5.5 of 12);
-        @include vertical-center;
+        width: 40%;
+        //@include span-columns(5.5 of 12);
+        //@include vertical-center;
         //@include shift(6 of 12);
-        right:20px;
+        //right:20px;
       }
 
       p { @include s-medium;}
@@ -123,48 +142,10 @@ Related Links
   }
 }
 
-.right-image{
-  .image-block {
-    @include media($tablet) {
-      border-left: 5px solid white;
-      border-right: none;
-      @include position(absolute, 0 0 0 null);
-    }
-  }
 
- .text-block {
-    @include media($tablet) {
-      left:20px;
-      text-align: center;
-    }
-  }
-
-  .button-black-base{
-    background-color: rgba(0, 0, 0, 0.2);
-    border: none;
-    opacity: 0.5;
-
-    &:hover{
-      background-color: rgba(0, 0, 0, 0.3);
-      opacity: 1;
-    }
-  }
-}
-
-.subpage-header{
-  .image-block{
-    @include media($tablet) {
-      width: 70%;
-    }
-    .text-block{
-      @include media($tablet) {
-        right:inherit;
-      }
-    }
-  }
-}
-
-
+/*-----------------------
+Arrow for Link
+-----------------------*/
 
 .arrow{
   &:after{
@@ -174,13 +155,27 @@ Related Links
   }
 }
 
+/*
+.arrow{
+  &:after{
+    content: "";
+    background: url('../images/arrow.svg') no-repeat;
+    display: inline-block;
+    @include rem(margin-left, 7px);
+    height: 20px;
+    width: 20px;
+    background-size: 100%;
+  }
+}
+*/
 
-//Paragraph Block
+/*-----------------------
+Paragraph Block
+-----------------------*/
 .paragraph-container{
   @include media($tablet) {
     @include span-columns(7 of 12);
     @include shift(2.5);
-    //@include clearfix;
   }
 }
 
@@ -217,7 +212,9 @@ Related Links
   }
 }
 
-//Accordion
+/*-----------------------
+Accordion for Mobile
+-----------------------*/
 .accordion {
   ul.submenu {
     display: none;
@@ -254,13 +251,16 @@ Related Links
 }
 
 
-//Featured Content
+/*-----------------------
+Featured Content
+-----------------------*/
 .featured-content{
   position: relative;
 
   .image-block {
     @include background-size(cover);
     height:300px;
+
     @include media($tablet) {
       border-right: 5px solid white;
       height: 100%;
@@ -284,10 +284,12 @@ Related Links
 
     &:first-child{
       background-color: #48CBD9;
+      border-top: 5px solid $white-base;
       border-bottom: 5px solid $white-base;
 
      @include media($tablet) {
       border-right: 5px solid $white-base;
+      border-top: none;
       float: left;
       width: 50%;
       min-height: 250px;
@@ -307,8 +309,10 @@ Related Links
 
     &:nth-child(3){
       background-color: #363A42;
+      border-bottom: 5px solid $white-base;
 
       @include media($tablet) {
+        border: none;
       width: 100%;
       display: inline-block;
       min-height: 250px;
@@ -332,5 +336,134 @@ Related Links
     &:hover{
       background-color: rgba(0, 0, 0, 0.4);
     }
+  }
+}
+
+/*-----------------------
+Calendar
+-----------------------*/
+/*
+.date{
+  text-align: center;
+  background-color: $grey-base;
+  color: $white-base;
+  display: inline-block;
+  @include rem(padding, 8px 15px 5px);
+  line-height: 1;
+  text-transform: uppercase;
+  float: left;
+
+  strong{
+    display: block;
+    font-weight: $bold;
+    @include s-huge;
+  }
+}
+*/
+
+.date{
+  text-align: center;
+  background-color: $grey-base;
+  color: $white-base;
+  //display: inline-block;
+  @include rem(padding, 9px 11px 6px);
+  line-height: 1;
+  text-transform: uppercase;
+  float: left;
+  @include rem(margin-right, 20px);
+
+  strong{
+    display: block;
+    font-weight: $bold;
+    @include s-large;
+  }
+}
+
+
+.calendar-blocks{
+  li{
+    display: inline-block;
+    @include rem(margin-bottom, 20px);
+
+    &:last-child{ margin-bottom: 0px; }
+
+    @include media($tablet) {
+      @include span-columns(6 of 12);
+      @include omega(2n);
+    }
+  }
+}
+
+.event-details{
+  float: left;
+  //display: inline-block;
+  width: calc(100% - 80px);
+}
+/*-----------------------
+Image Text Container
+-----------------------*/
+.intro-description{
+  background-color: $white-light;
+  @include rem(margin-top, 5px);
+}
+
+.image-text-container{
+  border-bottom: 1px solid $white-med;
+
+  &:last-child{
+    border-bottom: none;
+  }
+}
+
+#{$all-buttons} {
+  @include appearance(none);
+  background-color: $teal-base;
+  border-radius: 20em;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $primary-sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: $bold;
+  line-height: 1;
+  @include s-small;
+  @include rem(padding, 15px 12px);
+  text-decoration: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 100%;
+  @include transition(0.3s ease-in-out);
+  @include media($tablet){ width: 200px; }
+
+  &:hover,
+  &:focus {
+    background-color: shade($teal-base, 20%);
+    color: #fff;
+    outline: none;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+
+    &:hover {
+      background-color: $teal-dark;
+    }
+  }
+}
+
+.footer-block{
+  #{$all-buttons} {
+    background-color: $white-base;
+    border-radius: 0px;
+    color: $purple-dark;
+    height: 41px;
+    line-height: 0.6;
+    opacity: 0.4;
+    width: 20%;
+
+    &:hover{ opacity: 1; }
   }
 }

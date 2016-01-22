@@ -1,50 +1,68 @@
 // Form Styles Stylesheet
 // ========================================
 
-
-// Inputs
 #{$all-text-inputs},
 select,
 textarea{
-  @include appearance(none);
-  @include font-type($primary-sans-serif, normal, 300);
-  @include rem(padding, 8px 10px);
-  @include s-base;
-  background-color: $purple-dark;
-  border: none;
+  background-color: $white-base;
+  border: 1px solid $grey-light;
   box-sizing: border-box;
-  color: $white-base;
-  width: 80%;
+  @include appearance(none);
+  @include font-type($primary-sans-serif, normal, $regular);
+  @include rem(margin-top, 15px);
+  @include rem(padding, 15px);
+  @include s-base;
+  width: 100%;
   -webkit-font-smoothing: antialiased;
-  float: left;
-
 
   @include placeholder{
-    color: $white-base;
-    opacity: 0.6;
-    font-style: italic;
+    color: $grey-base;
     @include s-small;
-    line-height: 1.5;
   }
 
   &:focus{
-    @include box-shadow(0 0 0, transparent);
-    border-color: $blue-base;
+    border-color: $teal-base;
     outline: none;
   }
 }
 
-input[type="submit"]{
-  @include s-small;
-  border: none;
-  width: 20%;
-  float: left;
-  background-color: $white-base;
-  height: 37px;
-  opacity: 0.5;
-  @include font-type($primary-sans-serif, normal, $bold);
+textarea,
+textarea[type="text"]{
+  height: 210px;
+  @include rem(margin-bottom, 12px);
+  resize: vertical;
+}
 
-  &:hover{ cursor: pointer; }
+.form-block{
+  @include media($tablet){
+    @include span-columns(6 of 12);
+  }
+}
+
+.form-container{
+  input[type="submit"]{
+    @include media($tablet){
+      float: right;
+    }
+  }
+
 }
 
 
+.footer-block input[type="text"]{
+  background-color: $purple-dark;
+  border: none;
+  color: $white-base;
+  float: left;
+  @include rem(padding, 8px 10px);
+  @include s-base;
+  margin: 0;
+  width: 80%;
+
+  @include placeholder{
+    color: $white-base;
+    font-style: italic;
+    line-height: 1.5;
+    opacity: 0.6;
+  }
+}
