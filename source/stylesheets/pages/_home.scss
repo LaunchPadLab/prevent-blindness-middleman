@@ -48,7 +48,7 @@ Link Index
     @include media($tablet){
      @include columns(3);
     }
-    li{ margin: 0; }
+    li{ list-style: none; margin: 0; }
 
     a{
       display: inline-block;
@@ -106,42 +106,98 @@ Page Header
 -----------------------*/
 
 .page-callout {
-  background-color: $white-light;
+  background-color: $teal-base;
   position: relative;
 
   @include media($tablet) { min-height: 100px; }
 
-  h4, p { text-align: left; max-width: 600px; }
-  h4 a{ @include font-type($primary-slab-serif, normal, 900); }
+  h4, p { text-align: left; max-width: 600px; color: $white-base; }
+  h4 a{ @include font-type($primary-slab-serif, normal, 900); color: $teal-dark; }
 
   .image-block {
     @include background-size(cover);
+    height: 300px;
+    border-bottom: 5px solid $white-base;
+
     @include media($tablet) {
+      border-bottom: none;
       height: 100%;
       @include position(absolute, 0 null 0 null);
       width: 50%;
     }
   }
 
-  .text-container {
-      @include outer-container();
-      @include base-padding;
+  ul{
+    @include media($tablet-landscape) {
+      @include rem(margin-top, -45px);
+    }
+  }
+
+  .text-wrapper {
+    @include base-padding;
+
+    @include media($tablet) {
+      width: 50%;
+    }
+
+    .text-content{
+      @include media($tablet-landscape) {
+        @include center;
+        max-width: 500px;
+      }
+    }
 
     .text-block {
-      @include media($tablet) {
-        width: 40%;
-        //@include span-columns(5.5 of 12);
-        //@include vertical-center;
-        //@include shift(6 of 12);
-        //right:20px;
+      list-style: none;
+      margin-left: 0;
+      @include rem(margin-bottom, 30px);
+
+      @include media($tablet-landscape) {
+        max-width: 500px;
+        @include center;
+        max-width: 500px;
+        width: inherit;
+        @include rem(margin-left, 60px);
       }
 
-      p { @include s-medium;}
+      p { @include s-medium; }
 
+    }
+  }
+
+  a.arrow{
+    background-color: rgba(0, 0, 0, 0.2);
+    color: $white-base;
+    @include position(absolute, null 0px 0px 0px);
+    width: 100%;
+    @include rem(padding, 12px 20px);
+    opacity: 0.5;
+
+    @include media($tablet){ width: 50%; }
+
+    &:hover{
+      background-color: rgba(0, 0, 0, 0.4);
     }
   }
 }
 
+.position-text {
+  @include media($tablet-landscape){
+    transform: translateX(-100%);
+  }
+}
+
+.rotate-text {
+  opacity: 0.5;
+  color: $white-base;
+
+  @include media($tablet-landscape){
+    transform: rotate(-90deg);
+    transform-origin: right top;
+    text-align: right;
+    opacity: 0.3;
+  }
+}
 
 /*-----------------------
 Arrow for Link
@@ -155,20 +211,6 @@ Arrow for Link
   }
 }
 
-/*
-.arrow{
-  &:after{
-    content: "";
-    background: url('../images/arrow.svg') no-repeat;
-    display: inline-block;
-    @include rem(margin-left, 7px);
-    height: 20px;
-    width: 20px;
-    background-size: 100%;
-  }
-}
-*/
-
 /*-----------------------
 Paragraph Block
 -----------------------*/
@@ -179,76 +221,8 @@ Paragraph Block
   }
 }
 
-.secondary-links{
-  h4, a { color: $white-base; }
-
-  h4{
-    opacity: 0.5;
-    @include media($tablet){
-      border-bottom: 2px solid $white-base;
-      @include rem(padding-bottom, 15px);
-    }
-  }
-
-  a{
-    display: inline-block;
-    @include rem(margin, 8px 0);
-    opacity: 0.5;
 
 
-    @include media($tablet) { @include rem(margin, 10px 0 0 0); }
-
-    &:hover{
-      opacity: 1;
-    }
-  }
-
-  &.text-container .text-block{
-    @include media($tablet) {
-      width: 30%;
-      right: 0;
-      padding: 0 3%;
-    }
-  }
-}
-
-/*-----------------------
-Accordion for Mobile
------------------------*/
-.accordion {
-  ul.submenu {
-    display: none;
-    background-color: rgba(0, 0, 0, 0.2);
-    @include rem(padding, 20px);
-
-    @include media($tablet) {
-      display: block;
-      background-color: transparent;
-      padding: 0;
-    }
-  }
-
-  .is-expanded {
-    display: block;
-  }
-
-  .js-accordion-trigger{
-    background-color: rgba(0, 0, 0, 0.2);
-    @include rem(padding, 20px);
-    width: 100%;
-    margin: 0;
-    position: relative;
-
-    @include media($tablet) { display: none; }
-
-    &:after{
-      content:"\25be";
-      display: block;
-      @include position(absolute, 20px 20px null null);
-      @include s-bigger;
-    }
-  }
-}
 
 
 /*-----------------------
@@ -259,9 +233,9 @@ Featured Content
 
   .image-block {
     @include background-size(cover);
-    height:300px;
+    height: 300px;
 
-    @include media($tablet) {
+    @include media($tablet-landscape) {
       border-right: 5px solid white;
       height: 100%;
       @include position(absolute, 0 null 0 null);
@@ -273,17 +247,23 @@ Featured Content
 .feature-blocks{
 
   @include media($tablet) {
+    border-top: 5px solid $white-base;
+  }
+
+  @include media($tablet-landscape) {
+    border-top: none;
     margin-left: 50%;
     width: 50%;
   }
 
   h4, p, a { color: $white-base; }
+  p{ @include s-small; }
 
   .feature-block{
     position: relative;
 
     &:first-child{
-      background-color: #48CBD9;
+      background-color: $teal-base;
       border-top: 5px solid $white-base;
       border-bottom: 5px solid $white-base;
 
@@ -313,9 +293,13 @@ Featured Content
 
       @include media($tablet) {
         border: none;
-      width: 100%;
-      display: inline-block;
-      min-height: 250px;
+        width: 100%;
+        display: inline-block;
+        min-height: 250px;
+      }
+
+      .feature-text{
+        @include media($tablet) { max-width: 600px; }
       }
     }
 
@@ -360,12 +344,18 @@ Calendar
   }
 }
 */
+.calendar-container{
+  h3{
+    border-bottom: 3px solid $grey-base;
+    @include rem(margin-bottom, 15px);
+    @include rem(padding-bottom, 15px);
+  }
+}
 
 .date{
   text-align: center;
-  background-color: $grey-base;
+  background-color: $grey-light;
   color: $white-base;
-  //display: inline-block;
   @include rem(padding, 9px 11px 6px);
   line-height: 1;
   text-transform: uppercase;
@@ -383,22 +373,25 @@ Calendar
 .calendar-blocks{
   li{
     display: inline-block;
-    @include rem(margin-bottom, 20px);
-
-    &:last-child{ margin-bottom: 0px; }
+    margin: 0;
+    @include rem(margin-top, 30px);
 
     @include media($tablet) {
       @include span-columns(6 of 12);
       @include omega(2n);
+      //@include rem(margin-top, 50px);
     }
   }
 }
 
 .event-details{
   float: left;
-  //display: inline-block;
   width: calc(100% - 80px);
+
+  @include media($tablet) {  width: calc(100% - 100px); }
 }
+
+
 /*-----------------------
 Image Text Container
 -----------------------*/
@@ -410,60 +403,7 @@ Image Text Container
 .image-text-container{
   border-bottom: 1px solid $white-med;
 
-  &:last-child{
+  &:last-of-type{
     border-bottom: none;
-  }
-}
-
-#{$all-buttons} {
-  @include appearance(none);
-  background-color: $teal-base;
-  border-radius: 20em;
-  border: 0;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-family: $primary-sans-serif;
-  -webkit-font-smoothing: antialiased;
-  font-weight: $bold;
-  line-height: 1;
-  @include s-small;
-  @include rem(padding, 15px 12px);
-  text-decoration: none;
-  user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  width: 100%;
-  @include transition(0.3s ease-in-out);
-  @include media($tablet){ width: 200px; }
-
-  &:hover,
-  &:focus {
-    background-color: shade($teal-base, 20%);
-    color: #fff;
-    outline: none;
-  }
-
-  &:disabled {
-    cursor: not-allowed;
-    opacity: 0.5;
-
-    &:hover {
-      background-color: $teal-dark;
-    }
-  }
-}
-
-.footer-block{
-  #{$all-buttons} {
-    background-color: $white-base;
-    border-radius: 0px;
-    color: $purple-dark;
-    height: 41px;
-    line-height: 0.6;
-    opacity: 0.4;
-    width: 20%;
-
-    &:hover{ opacity: 1; }
   }
 }

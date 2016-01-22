@@ -39,10 +39,17 @@ h1 {
 }
 
 h2 { font-size: $font-size-base * 2.00; @include media($tablet){ font-size: $font-size-base * 3.00; } }
-h3 { font-size: $font-size-base * 1.45; @include media($tablet){ font-size: $font-size-base * 2.00; } }
+h3 { font-size: $font-size-base * 1.75; @include media($tablet){ font-size: $font-size-base * 2.00; } }
 h4 { font-size: $font-size-base * 1.35; @include media($tablet){ font-size: $font-size-base * 1.75; } }
 h5 { font-size: $font-size-base * 1.15; @include media($tablet){ font-size: $font-size-base * 1.25; } }
 h6 { font-size: $font-size-base - 2.00; @include media($tablet){ font-size: $font-size-base * 1.00; } }
+
+h4 a{
+  @include font-type($primary-slab-serif, normal, 900);
+  font-size: inherit;
+
+  &:hover{ text-decoration: underline; }
+}
 
 p {
   font-weight: normal;
@@ -67,26 +74,23 @@ dd{
   line-height: 1.6;
   color: $black-light;
   list-style: disc;
-  @include rem(margin-left, 20px);
+  @include rem(margin, 0px 0px 15px 20px);
 
   @include media($tablet) {  @include s-base; }
 }
 
-ul{
-  @include rem(margin-bottom, 15px);
-  //display: inline-block;
-  //width: 100%;
-}
 
 a {
+  color: $grey-base;
   @include font-type($primary-sans-serif, normal, $bold);
   @include transition(all 0.3s ease-in-out);
-  text-decoration: none;
-  color: $grey-base;
   @include s-medium;
+  text-decoration: none;
+  display: inline-block;
 
   &:hover {
     color: $black-dark;
+    cursor: pointer;
     text-decoration: none;
   }
 

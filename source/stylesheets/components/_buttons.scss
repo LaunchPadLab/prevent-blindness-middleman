@@ -88,3 +88,68 @@
     }
   }
 }
+
+#{$all-buttons} {
+  @include appearance(none);
+  background-color: $teal-base;
+  border-radius: 20em;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $primary-sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: $bold;
+  line-height: 1;
+  @include s-small;
+  @include rem(padding, 15px 12px);
+  text-decoration: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 100%;
+  @include transition(0.3s ease-in-out);
+  @include media($tablet){ width: 200px; }
+
+  &:hover,
+  &:focus {
+    background-color: shade($teal-base, 20%);
+    color: #fff;
+    outline: none;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+
+    &:hover {
+      background-color: $teal-dark;
+    }
+  }
+}
+
+.footer-block{
+  #{$all-buttons} {
+    background-color: $white-base;
+    border-radius: 0px;
+    color: $purple-dark;
+    height: 41px;
+    line-height: 0.6;
+    opacity: 0.4;
+    width: 20%;
+
+    &:hover{ opacity: 1; }
+  }
+}
+
+//Video Link
+.video-link:before{
+  content: "";
+  background: url('../images/play-button.svg') no-repeat;
+  display: inline-block;
+  @include rem(margin-right, 7px);
+  height: 20px;
+  width: 20px;
+  background-size: 100%;
+  vertical-align: sub;
+}

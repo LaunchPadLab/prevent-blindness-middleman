@@ -99,23 +99,121 @@ Page Header
   }
 }
 
+
+/*-----------------------
+Subpage Header with additional nav
+-----------------------*/
 .subpage-header{
   .image-block{
     @include media($tablet) {
       width: 70%;
     }
+
     .text-block{
       @include media($tablet) {
-        right:inherit;
+        right: inherit;
       }
     }
   }
 }
 
+//Accordion for Mobile
+.accordion {
+  z-index: 2;
+  ul.submenu {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.2);
+    @include rem(padding, 20px);
+
+    @include media($tablet) {
+      display: block;
+      background-color: transparent;
+      padding: 0;
+    }
+
+    li{ list-style: none; margin:0;}
+  }
+
+  .is-expanded {
+    display: block;
+  }
+
+  .js-accordion-trigger{
+    background-color: rgba(0, 0, 0, 0.2);
+    @include rem(padding, 20px);
+    width: 100%;
+    margin: 0;
+    position: relative;
+
+    @include media($tablet) { display: none; }
+
+    &:after{
+      content:"\25be";
+      display: block;
+      @include position(absolute, 20px 20px null null);
+      @include s-bigger;
+    }
+  }
+}
+
+//Secondary Links
+.secondary-links{
+  h4, a { color: $white-base; }
+
+  h4{
+    opacity: 0.5;
+    @include media($tablet){
+      border-bottom: 2px solid $white-base;
+      @include rem(padding-bottom, 15px);
+    }
+  }
+
+  a{
+    display: inline-block;
+    @include rem(margin, 8px 0);
+    opacity: 0.5;
+
+
+    @include media($tablet) { @include rem(margin, 10px 0 0 0); }
+
+    &:hover{
+      opacity: 1;
+    }
+  }
+
+  &.text-container .text-block{
+    @include media($tablet) {
+      width: 30%;
+      right: 0;
+      padding: 0 3%;
+    }
+  }
+}
+
+.page-header .text-container.test1{
+  @include media($tablet){
+    height: 100%;
+    position: relative;
+  }
+
+  .text-block{
+    @include media($tablet){
+      @include vertical-center;
+      left: 20px;
+      width: 50%;
+    }
+  }
+}
 
 /*-----------------------
 Video Header
 -----------------------*/
+.home-header{
+  h1{
+    @include media($tablet-landscape){ @include s-giga; line-height: 1.1; }
+  }
+}
+
 video{
   display: none;
 
@@ -126,10 +224,12 @@ video{
 }
 
 .overlay{
-  background-color: $black-dark;
-  display: block;
-  height: 100%;
-  @include position(absolute, 0px 0px 0px 0px);
-  opacity: 0.4;
-  width: 100%;
+  @include media($tablet){
+    background-color: $black-dark;
+    display: block;
+    height: 100%;
+    @include position(absolute, 0px 0px 0px 0px);
+    opacity: 0.4;
+    width: 100%;
+  }
 }

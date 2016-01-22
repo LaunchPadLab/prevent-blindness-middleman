@@ -423,7 +423,11 @@ a.hover-link{
   @include rem(margin-bottom, 65px);
   padding: 0;
   @include media($tablet){ @include rem(margin-bottom, 65px); }
-   @include media($tablet-landscape) { margin-bottom: 0; }
+  @include media($tablet-landscape) {
+   margin-bottom: 0;
+
+   max-width: 54em;
+ }
 }
 
 /* --------------------------
@@ -433,7 +437,7 @@ Search
   display: none;
   position: absolute;
   left: 0px;
-  top: 15px;
+  top: 32px;
   width: 100%;
   z-index: 99999;
 
@@ -441,13 +445,18 @@ Search
     background-color: $teal-base;
     color: $white-base;
     @include s-large;
-    padding: 20px;
     border: none;
     height: 61px;
     line-height: 2em;
+    margin: 0;
+    @include rem(padding, 20px);
     width: 100%;
 
-    @include placeholder{ color: $white-base; @include s-large; line-height: 2;}
+    @include placeholder{
+      color: $white-base;
+      @include s-large;
+      line-height: 2;
+    }
 
     @include media($tablet) { height: 77px; }
   }
