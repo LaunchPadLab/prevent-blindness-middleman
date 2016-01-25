@@ -447,7 +447,15 @@ Three Column Secondary Features
       @include span-columns(4 of 12);
     }
 
-    img{ @include rem(margin, 0px 0px 25px); width: 75px; }
+    p{ @include s-small; }
+
+    img{
+      @include rem(margin, 15px 0px);
+      width: 65px;
+      @include media($tablet){
+        @include rem(margin, 0px 0px 15px);
+      }
+    }
   }
 }
 
