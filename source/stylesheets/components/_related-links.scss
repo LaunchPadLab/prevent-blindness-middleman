@@ -1,0 +1,37 @@
+/*-----------------------
+Related Links
+-----------------------*/
+.related-links{
+  border-top: 1px solid $white-med;
+  display: inline-block;
+  width: 100%;
+
+  h5{
+    color: $grey-light;
+    @include media($tablet){
+      margin: 0;
+      @include span-columns(2 of 12);
+      @include rem(margin-top, 10px);
+    }
+  }
+
+  .related-links-container{
+    @include rem(padding, 20px);
+    @include media($tablet){ @include rem(padding, 40px 20px); }
+  }
+
+  ul{
+    display: inline-block;
+    @include media($tablet){ @include span-columns(10 of 12); }
+  }
+  li{
+    display: inline-block;
+    @include rem(margin, 0  10px 0 0);
+
+    a{
+      @include rem(margin, 5px 0px);
+      @include s-tiny;
+      @include media($tablet){ @include s-small; }
+    }
+  }
+}

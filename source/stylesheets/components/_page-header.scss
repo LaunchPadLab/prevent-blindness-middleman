@@ -1,0 +1,299 @@
+//Page Header
+.page-header{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: $mobile-nav-height;
+
+  @include media($tablet){
+    height: 500px;
+    margin-top: $tablet-nav-height;
+    position: relative;
+  }
+
+  @include media($tablet-landscape) {
+    margin-top: $desktop-nav-height;
+  }
+
+  .header-text{
+    @include media($tablet){
+      @include vertical-center;
+    }
+  }
+
+  h1{ color: $white-base; }
+
+  .subheader{
+    color: $white-base;
+    @include s-medium;
+  }
+}
+
+/*-----------------------
+Page Header
+-----------------------*/
+
+.page-header {
+  background-color: $teal-base;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+  @include media($tablet) { height: 500px; }
+
+  h1, p { color: $white-base; max-width: 600px; }
+
+  .image-block {
+    @include background-size(cover);
+    height:300px;
+    @include media($tablet) {
+      border-right: 5px solid white;
+      height: 100%;
+      @include position(absolute, 0 null 0 null);
+      width: 50%;
+    }
+  }
+
+  .text-container {
+      @include outer-container();
+      @include base-padding;
+      z-index:2;
+
+    .text-block {
+      @include media($tablet) {
+        @include span-columns(5.5 of 12);
+        @include vertical-center;
+        right:20px;
+      }
+
+      p { @include s-medium;}
+
+    }
+  }
+}
+
+/*-----------------------
+Right Image
+-----------------------*/
+.right-image{
+  .image-block {
+    @include media($tablet) {
+      border-left: 5px solid white;
+      border-right: none;
+      @include position(absolute, 0 0 0 null);
+    }
+  }
+
+ .text-block {
+    @include media($tablet) {
+      left:20px;
+      text-align: center;
+    }
+  }
+
+  .button-black-base{
+    background-color: rgba(0, 0, 0, 0.2);
+    border: none;
+    opacity: 0.5;
+
+    &:hover{
+      background-color: rgba(0, 0, 0, 0.3);
+      opacity: 1;
+    }
+  }
+}
+
+
+/*-----------------------
+Subpage Header with additional nav
+-----------------------*/
+.subpage-header{
+  .image-block{
+      height: 300px;
+      @include media($tablet) {
+        height: 500px;
+        width: 70%;
+      }
+
+
+    .text-block{
+      @include media($tablet) {
+        right: inherit;
+      }
+    }
+  }
+
+  .overlay {
+    border-right: 5px solid $white-base;
+    width: 70%;
+  }
+}
+
+
+//Accordion for Mobile
+.accordion {
+  z-index: 2;
+  ul.submenu {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.2);
+    @include rem(padding, 20px);
+
+    @include media($tablet) {
+      display: block;
+      background-color: transparent;
+      padding: 0;
+    }
+
+    li{ list-style: none; margin:0;}
+  }
+
+  .is-expanded {
+    display: block;
+  }
+
+  .js-accordion-trigger{
+    background-color: rgba(0, 0, 0, 0.2);
+    @include rem(padding, 20px);
+    margin: 0;
+    position: relative;
+    width: 100%;
+
+    @include media($tablet) { display: none; }
+
+    &:after{
+      content:"\25be";
+      display: block;
+      @include position(absolute, 24px 20px null null);
+      @include s-bigger;
+    }
+  }
+}
+
+//Secondary Links
+.secondary-links{
+  background-color: $grey-lightest;
+  border-top: 5px solid $white-base;
+
+  @include media($tablet) {
+    background-color: transparent;
+    border-top: none;
+  }
+
+
+  h4{
+
+    opacity: 0.5;
+    @include media($tablet){
+      border-bottom: 2px solid $white-base;
+      color: $white-base;
+      @include rem(padding-bottom, 15px);
+    }
+  }
+
+  a{
+    color: $white-base;
+    display: inline-block;
+    @include rem(margin, 8px 0);
+    opacity: 0.5;
+
+
+    @include media($tablet) { @include rem(margin, 10px 0 0 0); }
+
+    &:hover{
+      opacity: 1;
+    }
+  }
+
+  &.text-container .text-block{
+    @include media($tablet) {
+      width: 30%;
+      right: 0;
+      padding: 0 3%;
+    }
+  }
+}
+
+.page-header .text-container.interior-text{
+  @include media($tablet){
+    height: 100%;
+    position: relative;
+  }
+
+  .text-block{
+    @include media($tablet){
+      @include vertical-center;
+      left: 20px;
+      width: 50%;
+    }
+  }
+}
+
+/*-----------------------
+Video Header
+-----------------------*/
+.home-header{
+  h1{
+    @include media($tablet-landscape){ @include s-giga; line-height: 1.1; }
+  }
+
+  .image-block{
+    background-repeat: no-repeat;
+    background-position: center top;
+    @include media($tablet) {
+      display: none;
+    }
+  }
+}
+
+video{
+  display: none;
+
+  @include media($tablet) {
+    display: block;
+    width: 125%;
+  }
+
+  @include media($tablet-landscape) {
+    width: 100%;
+  }
+}
+
+.overlay{
+  @include media($tablet){
+    background-color: $black-dark;
+    display: block;
+    height: 100%;
+    @include position(absolute, 0px 0px 0px 0px);
+    opacity: 0.4;
+    width: 100%;
+  }
+
+  &.darkened{ opacity: 0.7; }
+}
+
+
+.home-secondary-header{
+  .image-block{
+    background-position: center top;
+    background-repeat: no-repeat;
+
+    @include media($tablet){
+      border:none;
+      width: 100%;
+    }
+  }
+}
+
+/*-----------------------
+Text Only Header
+-----------------------*/
+.text-only{
+  height: inherit;
+}
+
+.home-secondary-header{
+ h1, p { color: $white-base; max-width: 700px; }
+  h1{
+    @include media($tablet-landscape){ @include s-giga; line-height: 1.1; }
+  }
+}

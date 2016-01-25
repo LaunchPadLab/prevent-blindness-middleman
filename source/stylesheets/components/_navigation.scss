@@ -1,0 +1,524 @@
+// Site Navigation Styles
+// ========================================
+$mobile-nav-height: 65px;
+$tablet-nav-height: 98px;
+$desktop-nav-height: 109px;
+
+/*-----------------------
+Full Nav
+-----------------------*/
+.full-nav{
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  height: $mobile-nav-height;
+  @include position(fixed, 0px 0px null 0px);
+  z-index: 4;
+
+  @include media($tablet){
+    height: $tablet-nav-height;
+  }
+
+  @include media($tablet-landscape) {
+    height: $desktop-nav-height;
+  }
+
+  ul{ margin-bottom: 0; }
+  li{ list-style: none; margin: 0;}
+}
+
+/*-----------------------
+Sub Nav
+-----------------------*/
+.sub-header{
+  display: none;
+
+  @include media($tablet) {
+    background-color: $white-light;
+    display: block;
+  }
+
+  ul{
+    text-align: right;
+    font-size: 0;
+
+    li{
+      display: inline-block;
+      margin: 0;
+
+      a{
+        border-left: 1px solid $white-med;
+        color: $grey-light;
+        display: inline-block;
+        @include rem(padding, 2px 15px);
+        @include s-tiny;
+        margin: 0;
+        letter-spacing: 0.25px;
+        line-height: 2;
+        text-transform: uppercase;
+
+        &:hover{
+          background-color: $grey-lighter;
+        }
+      }
+    }
+  }
+}
+
+.group-name{
+  @include media($tablet-landscape){
+    color: $grey-light;
+    float: left;
+    font-weight: $bold;
+    @include rem(margin, 0px 0px 0px 20px);
+    @include s-tiny;
+    letter-spacing: 0.25px;
+    line-height: 2.5;
+    text-transform: uppercase;
+  }
+}
+
+.trigger-search:before{
+  content: "";
+  background: url('../images/search.svg') no-repeat;
+  display: inline-block;
+  @include rem(margin-right, 7px);
+  height: 20px;
+  width: 20px;
+  background-size: 100%;
+  opacity: 0.2;
+  vertical-align: middle;
+}
+
+/*-----------------------
+Logo
+-----------------------*/
+.logo{
+  display: inline-block;
+
+  img{
+    @include rem(margin, 5px 0 3px);
+    width: 110px;
+
+    @include media($tablet-landscape){ width: 140px; }
+  }
+}
+
+/*-----------------------
+Primary Nav
+-----------------------*/
+.navigation{
+  background-color: $white-base;
+
+  @include rem(padding, 5px 20px 0px);
+  position: relative;
+  width: 100%;
+  z-index: 9999;
+
+  ul.navigation-menu{ text-align: right; }
+
+  li { @include rem(margin, 0); }
+
+  .nav-link{
+    display: inline-block;
+    @include media($tablet-landscape){
+      @include rem(margin-left, 15px);
+    }
+
+    &.sub-link{
+      @include media($tablet){
+        display: none;
+      }
+    }
+  }
+}
+
+.nav-link .button{
+  color: $white-base;
+  @include rem(padding, 15px);
+  margin: 0;
+}
+
+.navigation-menu{
+  background-color: $white-base;
+  border-bottom: 1px solid $grey-light;
+  @include position(absolute, 30px 0px null null);
+  width: 100%;
+}
+
+/*-----------------------
+Mobile Nav
+-----------------------*/
+//Shift Page
+.page{
+  overflow-x: hidden;
+  position: relative;
+}
+
+.wrapper{
+  @include transition(ease 0.5s);
+  position: relative;
+  top: 0;
+
+  &.pushed{
+    @include transform(translateX(-100vw));
+  }
+}
+
+//Menu Trigger
+.menuTrigger {
+  @include position(absolute, 2px 5px null null);
+  cursor: pointer;
+  @include media($tablet-landscape){ display: none; }
+
+  svg{
+    height: 50px;
+    width: 50px;
+  }
+}
+
+.svg-menu-toggle {
+  fill: $grey-dark;
+  pointer-events: all; //needs to be there so the hover works
+  cursor:pointer;
+
+  .bar {
+    -webkit-transform:rotate(0) translateY(0) translateX(0);
+    transform:rotate(0) translateY(0) translateX(0);
+    opacity:1;
+
+
+    -webkit-transform-origin: 20px 10px;
+    transform-origin: 20px 10px;
+
+    -webkit-transition: -webkit-transform 0.4s ease-in-out, opacity 0.2s ease-in-out;
+      transition: transform 0.4s ease-in-out, opacity 0.2s ease-in-out;
+
+  }
+  .bar:nth-of-type(1) {
+    -webkit-transform-origin: 20px 10px;
+    transform-origin: 20px 10px;
+
+  }
+   .bar:nth-of-type(3) {
+    -webkit-transform-origin: 20px 20px;
+    transform-origin: 20px 20px;
+
+   }
+}
+
+.svg-menu-toggle.close {
+    .bar:nth-of-type(1) {
+      -webkit-transform:rotate(-45deg) translateY(0) translateX(0);
+      transform:rotate(-45deg) translateY(0) translateX(0);
+    }
+
+    .bar:nth-of-type(2) {
+      opacity: 0;
+    }
+
+    .bar:nth-of-type(3) {
+      -webkit-transform:rotate(45deg) translateY(0em) translateX(0em);
+      transform:rotate(45deg) translateY(0em) translateX(0em);
+    }
+}
+.inline-svg {
+  display:block;
+  margin:0 auto;
+}
+
+
+//Panel
+.panel  {
+  background: $white-base;
+  border-top: 5px solid $teal-base;
+  @include position(fixed, 65px null 0px);
+  height:100%;
+  right: -100vw;
+  @include transition(ease 0.5s);
+  overflow: scroll;
+  width: 100%;
+
+  @include media($tablet) { @include position(fixed, 97px null 0px); }
+
+  @include media($tablet-landscape){
+    background: transparent;
+    border: none;
+    height: initial;
+    position: initial;
+    right: 0;
+    width: initial;
+  }
+}
+
+.subPanel {
+  background: $white-base;
+  height:100%;
+  @include position(absolute, 0px null);
+  @include transition(ease 0.5s);
+  overflow: scroll;
+  right: -100vw;
+  width: 100%;
+
+  @include media($tablet-landscape){
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    height: inherit;
+    @include animation(fade 0.2s linear);
+    @include position(absolute, 0px 0px initial 0px);
+  }
+}
+
+@keyframes fade{
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.panel{
+  z-index: 10;
+}
+
+.nav-actions{ float: right; }
+
+.panel, .cta{ display: inline-block; }
+
+.cta{
+  vertical-align: top;
+  @include rem(margin, 5px 45px 0px 15px);
+
+  @include media($tablet-landscape){
+    @include rem(margin, 12px 0px 0px 15px);
+  }
+}
+
+  .panel a, .openSubPanel{
+    border-bottom: 1px solid $white-med;
+    color: $black-base;
+    cursor: pointer;
+    @include rem(padding, 10px 20px);
+    display: inline-block;
+    width: 100vw;
+    font-weight: $bold;
+    @include s-base;
+
+    @include media($tablet-landscape){
+      border: none;
+      display: inline-block;
+      @include s-small;
+      padding: 0;
+      width: inherit;
+    }
+  }
+
+  .panel ul a:hover, .openSubPanel:hover{
+    background-color: $teal-base;
+    color: $white-base;
+
+    @include media($tablet-landscape){
+      background-color: transparent;
+      color: $teal-base;
+    }
+  }
+
+  .panel.isOpen, .subPanel.isOpen {
+    @include transform(translateX(-100vw));
+  }
+
+.subPanel{
+  z-index: 20;
+
+  .heading {
+    color: $teal-base;
+    font-weight: $bold;
+    border-bottom: 2px solid $teal-base;
+    @include rem(padding, 10px 20px);
+    @include s-small;
+    letter-spacing: 0.25px;
+    margin: 0;
+    text-transform: uppercase;
+
+    @include media($tablet-landscape){
+      @include rem(margin-bottom, 15px);
+      @include rem(padding, 10px 0);
+    }
+  }
+
+  li a{
+    @include media($tablet-landscape){
+      font-weight: $regular;
+      @include rem(margin, 5px 0);
+      @include s-tiny;
+    }
+  }
+}
+
+.closeSubPanel, .closePanel, .openSubPanel {
+  cursor: pointer;
+}
+
+.closeSubPanel, .closePanel{
+  background-color: $black-base;
+  color: $white-base;
+  @include rem(padding, 10px 20px);
+  @include media($tablet-landscape){ display: none; }
+}
+
+.closePanel:before{
+  content: "\00D7";
+  display: inline-block;
+  @include s-bigger;
+  @include rem(margin-right, 8px);
+  vertical-align: middle;
+}
+
+.closeSubPanel:before{
+  content: "\2190";
+  display: inline-block;
+  @include s-bigger;
+  @include rem(margin-right, 8px);
+  vertical-align: middle;
+}
+
+//added
+.openSubPanel{
+  position: relative;
+  display: inline-block;
+  @include media($tablet-landscape){ display: none; }
+}
+
+a.hover-link{
+  display: none;
+  @include media($tablet-landscape){
+    display: block;
+    @include rem(padding, 22px 0);
+    width: inherit;
+    color: $grey-dark;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.25px;
+  }
+
+  &:hover:after{
+    @include media($tablet-landscape){
+      content: "";
+      display: block;
+      @include triangle(20px, $teal-base, up);
+      text-align: center;
+      @include rem(margin, 12px auto 0px);
+    }
+  }
+}
+
+//Hover Dropdown
+.hover-menu {
+  $submenu-width: 100vw;
+
+  overflow: visible;
+  padding-right: 0;
+
+  .hover-menu-item {
+    left: 0;
+    position: relative;
+  }
+
+  .subPanel {
+    @include media($tablet-landscape){
+      display: none;
+      @include position(absolute, 75px 0px null 0px);
+      margin: 0;
+    }
+  }
+
+  &:focus > .subPanel,
+  &:hover > .subPanel {
+     @include media($tablet-landscape){ display: block; }
+  }
+}
+
+.closePanel{
+  @include media($tablet-landscape){ display: none !important; }
+}
+
+//Sub-Panel Tablet Groups
+
+.subPanel{
+  @include media($tablet-landscape){
+    border-top: 5px solid $teal-base;
+    @include rem(padding, 30px);
+  }
+
+  &.one-group .group{
+     @include media($tablet-landscape){
+      @include span-columns(12 of 12);
+      @include columns(4);
+    }
+  }
+
+  &.two-groups .group{
+    @include media($tablet-landscape){ @include span-columns(6 of 12);}
+
+    ul{
+      @include media($tablet-landscape){  @include columns(2); }
+    }
+  }
+
+  &.three-groups .group{
+    @include media($tablet-landscape){ @include span-columns(4 of 12); }
+  }
+
+}
+
+.dropdown-container{
+  @include rem(margin-bottom, 65px);
+  padding: 0;
+  @include media($tablet){ @include rem(margin-bottom, 65px); }
+  @include media($tablet-landscape) {
+   margin-bottom: 0;
+
+   max-width: 54em;
+ }
+}
+
+/* --------------------------
+Search
+-------------------------- */
+.search-block {
+  display: none;
+  @include media($tablet) {
+  position: absolute;
+  left: 0px;
+  top: 32px;
+  }
+  width: 100%;
+  z-index: 99999;
+
+  input[type="text"] {
+    background-color: $teal-base;
+    color: $white-base;
+    @include s-large;
+    border: none;
+    height: 61px;
+    line-height: 2em;
+    margin: 0;
+    @include rem(padding, 20px);
+    width: 100%;
+
+    @include placeholder{
+      color: $white-base;
+      @include s-large;
+      line-height: 2;
+    }
+
+    @include media($tablet) { height: 77px; }
+  }
+}
+
+.nav-link{
+  &:hover{
+    .hover-link{ color: $teal-base; }
+    .hover-link:after{
+      content: "";
+      display: block;
+      @include triangle(20px, $teal-base, up);
+      text-align: center;
+      @include rem(margin, 12px auto 0px);
+    }
+  }
+}

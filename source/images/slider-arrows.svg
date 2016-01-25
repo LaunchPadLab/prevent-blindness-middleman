@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="28px" height="11px" viewBox="0 0 28 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Artboard-2" sketch:type="MSArtboardGroup" fill="#9B9B9B">
+            <path d="M10.92,1 L10.921,10.108 L3,5.553 L10.92,1 Z" id="Shape" sketch:type="MSShapeGroup"></path>
+            <path d="M24.92,1 L24.921,10.108 L17,5.553 L24.92,1 Z" id="Shape-Copy" sketch:type="MSShapeGroup" transform="translate(20.960500, 5.554000) rotate(-180.000000) translate(-20.960500, -5.554000) "></path>
+        </g>
+    </g>
+</svg>

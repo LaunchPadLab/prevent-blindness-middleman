@@ -1,0 +1,127 @@
+// Base Typography
+// ========================================
+
+html{
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  @include font-type($primary-sans-serif, normal, normal);
+  font: 100%/1.618;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-style: normal;
+  font-weight: normal;
+  @include font-type($primary-slab-serif, normal, 900);
+  @include rem(margin-bottom, 12px);
+  color: $black-base;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 1px;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: $font-size-base * 1.75;
+  @include media($tablet) { font-size: $font-size-base * 2.50; }
+  @include media($tablet-landscape) { font-size: $font-size-base * 4.00; }
+}
+
+h2 { font-size: $font-size-base * 2.00; @include media($tablet){ font-size: $font-size-base * 3.00; } }
+h3 { font-size: $font-size-base * 1.75; @include media($tablet){ font-size: $font-size-base * 2.00; } }
+h4 { font-size: $font-size-base * 1.35; @include media($tablet){ font-size: $font-size-base * 1.5; } }
+h5 { font-size: $font-size-base * 1.15; @include media($tablet){ font-size: $font-size-base * 1.25; } }
+h6 { font-size: $font-size-base - 2.00; @include media($tablet){ font-size: $font-size-base * 1.00; } }
+
+h4 a{
+  @include font-type($primary-slab-serif, normal, 900);
+  font-size: inherit;
+
+  &:hover{ text-decoration: underline; }
+}
+
+p {
+  color: $black-light;
+  font-weight: normal;
+  font-style: normal;
+  @include font-type($primary-sans-serif, normal, normal);
+  @include s-small;
+  @include rem(margin-bottom, 16px);
+  letter-spacing: 0.25px;
+  line-height: 1.6;
+
+  &:last-child { @include rem(margin-bottom, 0); }
+
+   @include media($tablet) {  @include s-base; }
+}
+
+li,
+dd{
+  color: $black-light;
+  @include font-type($primary-sans-serif, normal, normal);
+  @include rem(margin, 0px 0px 12px 20px);
+  line-height: 1.6;
+  list-style: disc;
+
+  @include media($tablet) {  @include s-base; }
+}
+
+ol li{
+  list-style: decimal;
+}
+
+a {
+  color: $grey-base;
+  display: inline-block;
+  @include font-type($primary-sans-serif, normal, $bold);
+  @include transition(all 0.3s ease-in-out);
+  @include s-medium;
+  line-height: 1.6;
+  text-decoration: none;
+
+  &:hover {
+    color: $black-dark;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+strong, b { @include font-type($primary-sans-serif, normal, $bold); }
+i, em { font-style: italic; font-weight: 200; }
+
+/*-----------------------
+Arrow for Link
+-----------------------*/
+.arrow{
+  &:after{
+    content: "\2192";
+    display: inline-block;
+    @include rem(margin-left, 7px);
+  }
+}
+
+/*-----------------------
+Underline
+-----------------------*/
+.underline{
+  border-bottom: 3px solid $teal-base;
+  color: $teal-base;
+  @include rem(margin-bottom, 15px);
+  @include rem(padding-bottom, 15px);
+}
