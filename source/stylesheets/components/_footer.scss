@@ -41,7 +41,7 @@ footer{
       @include media($tablet){ @include rem(margin-bottom, 10px); }
     }
 
-    li{ display: inline-block; margin-bottom: 5px; }
+    li{ display: inline-block; }
 
     a {
       color: $white-base;
@@ -103,5 +103,11 @@ footer{
       float: right;
       text-align: right;
     }
+  }
+}
+
+.copyright-container p{
+  @include media($tablet) {
+    @include rem(margin-top, 8px);
   }
 }

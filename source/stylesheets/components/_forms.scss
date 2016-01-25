@@ -30,7 +30,7 @@ textarea,
 textarea[type="text"]{
   height: 210px;
   @include rem(margin-bottom, 12px);
-  resize: vertical;
+  resize: none;
 }
 
 .form-blocks{

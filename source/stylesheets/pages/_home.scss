@@ -1,7 +1,7 @@
 /*-----------------------
-Image Content
+Left Content
 -----------------------*/
-.left-header{
+.left-content{
   @include media($tablet){
     @include span-columns(4 of 12);
   }
@@ -12,6 +12,10 @@ Image Content
     @include media($tablet){ @include rem(margin-bottom, 0); }
   }
 }
+
+/*-----------------------
+Description
+-----------------------*/
 .description{
   @include media($tablet){
     @include span-columns(8 of 12);
@@ -19,6 +23,14 @@ Image Content
 
   .link-block{
     a{ @include rem(margin-right, 10px); }
+  }
+
+  img{
+    @include rem(margin-bottom, 25px);
+    @include media($tablet){
+      @include center;
+      width: 60%;
+    }
   }
 }
 
@@ -37,12 +49,6 @@ Callout
 Link Index
 -----------------------*/
 .link-index-container{
-  h2{
-    border-bottom: 3px solid $teal-base;
-    color: $teal-base;
-    @include rem(margin-bottom, 15px);
-    @include rem(padding-bottom, 15px);
-  }
 
   ul{
     @include media($tablet){
@@ -62,13 +68,13 @@ Page Callout
 -----------------------*/
 
 .page-callout {
-  background-color: $teal-base;
+  background-color: $grey-lightest;
   position: relative;
 
   @include media($tablet) { min-height: 100px; }
 
-  h4, p { text-align: left; max-width: 600px; color: $white-base; }
-  h4 a{ @include font-type($primary-slab-serif, normal, 900); color: $teal-dark; }
+  h4, p { text-align: left; max-width: 600px; color: $grey-base; }
+  h4 a{ @include font-type($primary-slab-serif, normal, 900); color: $grey-base; line-height: 1.4;}
 
   .image-block {
     border-bottom: 5px solid $white-base;
@@ -84,6 +90,7 @@ Page Callout
   }
 
   ul{
+    display: inline-block;
     @include media($tablet-landscape) {
       @include rem(margin-top, -45px);
     }
@@ -109,21 +116,20 @@ Page Callout
       @include rem(margin-bottom, 30px);
 
       @include media($tablet-landscape) {
-        max-width: 500px;
         @include center;
         max-width: 500px;
         width: inherit;
         @include rem(margin-left, 60px);
       }
 
-      p { @include s-medium; }
+      p { @include s-small; }
 
     }
   }
 
-  a.arrow{
+  a.callout-arrow{
     background-color: rgba(0, 0, 0, 0.2);
-    color: $white-base;
+    color: $grey-dark;
     @include position(absolute, null 0px 0px 0px);
     @include rem(padding, 12px 20px);
     opacity: 0.5;
@@ -133,6 +139,20 @@ Page Callout
 
     &:hover{
       background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    span{
+      @include media($tablet-landscape) {
+        @include center;
+        max-width: 500px;
+        @include rem(padding-left, 60px);
+      }
+
+      &:after{
+        content: "\2192";
+        display: inline-block;
+        @include rem(margin-left, 7px);
+      }
     }
   }
 }
@@ -145,7 +165,7 @@ Page Callout
 
 .rotate-text {
   opacity: 0.5;
-  color: $white-base;
+  color: $grey-base;
 
   @include media($tablet-landscape){
     transform: rotate(-90deg);
@@ -156,8 +176,35 @@ Page Callout
 }
 
 /*-----------------------
+Left Callout
+-----------------------*/
+.left-image{
+
+  .text-wrapper {
+    @include media($tablet) {
+      margin-left: 50%;
+      border-left: 5px solid $white-base;
+    }
+  }
+
+  a.callout-arrow{
+    @include media($tablet) {
+      margin-left: 50%;
+      border-left: 5px solid $white-base;
+    }
+  }
+
+  .calendar-blocks{
+    li{
+      @include rem(margin-top, 0);
+    }
+  }
+}
+
+/*-----------------------
 Calendar
 -----------------------*/
+
 .calendar-container{
   h3{
     border-bottom: 3px solid $grey-base;
@@ -194,6 +241,8 @@ Calendar
       @include span-columns(6 of 12);
       @include omega(2n);
     }
+    h4 a{ line-height: 1.4; }
+    p{ @include s-small; }
   }
 }
 
@@ -209,6 +258,7 @@ Calendar
 Featured Content
 -----------------------*/
 .featured-content{
+  //clear: left;
   position: relative;
 
   .image-block {
@@ -331,6 +381,10 @@ Image Text Container
 Map Container
 -----------------------*/
 
+.map-container{
+  @include rem(padding-bottom, 0px);
+}
+
 .map {
   display: none;
 
@@ -358,4 +412,66 @@ Map Container
       stroke: $teal-base;
     }
   }
+}
+
+/*-----------------------
+Main Callout
+-----------------------*/
+.page-callout.color-callout{
+  background-color: $teal-base;
+  border-bottom: 5px solid $white-base;
+
+  .text-wrapper{
+    @include rem(padding-bottom, 80px);
+
+    h2, p, a{ color: $white-base; }
+    @include media($tablet){
+      @include rem(padding-bottom, 120px);
+    }
+  }
+  a.callout-arrow{
+    color: $white-base;
+    span{
+      @include media($tablet){ padding-left: 0; }
+    }
+  }
+}
+
+/*-----------------------
+Three Column Secondary Features
+-----------------------*/
+.three-column-features-container{
+
+  .text-block{
+    @include media($tablet){
+      @include span-columns(4 of 12);
+    }
+
+    img{ @include rem(margin, 0px 0px 25px); width: 75px; }
+  }
+}
+
+.secondary-header-container{
+  @include rem(padding-bottom, 0px);
+
+  .underline{ margin-bottom: 0px; }
+}
+
+
+/*-----------------------
+Contact Blocks
+-----------------------*/
+.contact-blocks{
+  .contact-info{
+    @include rem(margin-top, 30px);
+    @include media($tablet){
+      @include rem(margin-top, 0px);
+      @include span-columns(4 of 12);
+    }
+  }
+}
+
+.additional-contact-info{
+  display: inline-block;
+  @include rem(margin-top, 30px);
 }

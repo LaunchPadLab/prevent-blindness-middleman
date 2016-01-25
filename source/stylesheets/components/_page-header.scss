@@ -109,9 +109,12 @@ Subpage Header with additional nav
 -----------------------*/
 .subpage-header{
   .image-block{
-    @include media($tablet) {
-      width: 70%;
-    }
+      height: 300px;
+      @include media($tablet) {
+        height: 500px;
+        width: 70%;
+      }
+
 
     .text-block{
       @include media($tablet) {
@@ -119,7 +122,13 @@ Subpage Header with additional nav
       }
     }
   }
+
+  .overlay {
+    border-right: 5px solid $white-base;
+    width: 70%;
+  }
 }
+
 
 //Accordion for Mobile
 .accordion {
@@ -145,16 +154,16 @@ Subpage Header with additional nav
   .js-accordion-trigger{
     background-color: rgba(0, 0, 0, 0.2);
     @include rem(padding, 20px);
-    width: 100%;
     margin: 0;
     position: relative;
+    width: 100%;
 
     @include media($tablet) { display: none; }
 
     &:after{
       content:"\25be";
       display: block;
-      @include position(absolute, 20px 20px null null);
+      @include position(absolute, 24px 20px null null);
       @include s-bigger;
     }
   }
@@ -162,17 +171,27 @@ Subpage Header with additional nav
 
 //Secondary Links
 .secondary-links{
-  h4, a { color: $white-base; }
+  background-color: $grey-lightest;
+  border-top: 5px solid $white-base;
+
+  @include media($tablet) {
+    background-color: transparent;
+    border-top: none;
+  }
+
 
   h4{
+
     opacity: 0.5;
     @include media($tablet){
       border-bottom: 2px solid $white-base;
+      color: $white-base;
       @include rem(padding-bottom, 15px);
     }
   }
 
   a{
+    color: $white-base;
     display: inline-block;
     @include rem(margin, 8px 0);
     opacity: 0.5;
@@ -194,7 +213,7 @@ Subpage Header with additional nav
   }
 }
 
-.page-header .text-container.test1{
+.page-header .text-container.interior-text{
   @include media($tablet){
     height: 100%;
     position: relative;
@@ -216,6 +235,14 @@ Video Header
   h1{
     @include media($tablet-landscape){ @include s-giga; line-height: 1.1; }
   }
+
+  .image-block{
+    background-repeat: no-repeat;
+    background-position: center top;
+    @include media($tablet) {
+      display: none;
+    }
+  }
 }
 
 video{
@@ -223,6 +250,10 @@ video{
 
   @include media($tablet) {
     display: block;
+    width: 125%;
+  }
+
+  @include media($tablet-landscape) {
     width: 100%;
   }
 }
@@ -235,6 +266,21 @@ video{
     @include position(absolute, 0px 0px 0px 0px);
     opacity: 0.4;
     width: 100%;
+  }
+
+  &.darkened{ opacity: 0.7; }
+}
+
+
+.home-secondary-header{
+  .image-block{
+    background-position: center top;
+    background-repeat: no-repeat;
+
+    @include media($tablet){
+      border:none;
+      width: 100%;
+    }
   }
 }
 

@@ -115,3 +115,13 @@ Arrow for Link
     @include rem(margin-left, 7px);
   }
 }
+
+/*-----------------------
+Underline
+-----------------------*/
+.underline{
+  border-bottom: 3px solid $teal-base;
+  color: $teal-base;
+  @include rem(margin-bottom, 15px);
+  @include rem(padding-bottom, 15px);
+}
