@@ -1,18 +1,26 @@
 // Site Navigation Styles
 // ========================================
-$mobile-nav-height: 58px;
+$mobile-nav-height: 65px;
+$tablet-nav-height: 98px;
 $desktop-nav-height: 109px;
 
 /*-----------------------
 Full Nav
 -----------------------*/
 .full-nav{
-  @include media($tablet-landscape){
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    height: $desktop-nav-height;
-    @include position(fixed, 0px 0px null 0px);
-    z-index: 4;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  height: $mobile-nav-height;
+  @include position(fixed, 0px 0px null 0px);
+  z-index: 4;
+
+  @include media($tablet){
+    height: $tablet-nav-height;
   }
+
+  @include media($tablet-landscape) {
+    height: $desktop-nav-height;
+  }
+
   ul{ margin-bottom: 0; }
   li{ list-style: none; margin: 0;}
 }
@@ -55,6 +63,19 @@ Sub Nav
   }
 }
 
+.group-name{
+  @include media($tablet-landscape){
+    color: $grey-light;
+    float: left;
+    font-weight: $bold;
+    @include rem(margin, 0px 0px 0px 20px);
+    @include s-tiny;
+    letter-spacing: 0.25px;
+    line-height: 2.5;
+    text-transform: uppercase;
+  }
+}
+
 .trigger-search:before{
   content: "";
   background: url('../images/search.svg') no-repeat;
@@ -71,10 +92,14 @@ Sub Nav
 Logo
 -----------------------*/
 .logo{
-  @include rem(margin, 5px 0 3px);
-  width: 110px;
+  display: inline-block;
 
-  @include media($tablet-landscape){ width: 140px; }
+  img{
+    @include rem(margin, 5px 0 3px);
+    width: 110px;
+
+    @include media($tablet-landscape){ width: 140px; }
+  }
 }
 
 /*-----------------------
@@ -83,7 +108,7 @@ Primary Nav
 .navigation{
   background-color: $white-base;
 
-  @include rem(padding, 5px 20px);
+  @include rem(padding, 5px 20px 0px);
   position: relative;
   width: 100%;
   z-index: 9999;
@@ -94,9 +119,14 @@ Primary Nav
 
   .nav-link{
     display: inline-block;
-
     @include media($tablet-landscape){
       @include rem(margin-left, 15px);
+    }
+
+    &.sub-link{
+      @include media($tablet){
+        display: none;
+      }
     }
   }
 }
@@ -198,7 +228,7 @@ Mobile Nav
 
 //Panel
 .panel  {
-  background: $white-light;
+  background: $white-base;
   border-top: 5px solid $teal-base;
   @include position(fixed, 65px null 0px);
   height:100%;
@@ -220,7 +250,7 @@ Mobile Nav
 }
 
 .subPanel {
-  background: $white-light;
+  background: $white-base;
   height:100%;
   @include position(absolute, 0px null);
   @include transition(ease 0.5s);
@@ -266,6 +296,7 @@ Mobile Nav
     display: inline-block;
     width: 100vw;
     font-weight: $bold;
+    @include s-base;
 
     @include media($tablet-landscape){
       border: none;
@@ -329,6 +360,21 @@ Mobile Nav
   @include media($tablet-landscape){ display: none; }
 }
 
+.closePanel:before{
+  content: "\00D7";
+  display: inline-block;
+  @include s-bigger;
+  @include rem(margin-right, 8px);
+  vertical-align: middle;
+}
+
+.closeSubPanel:before{
+  content: "\2190";
+  display: inline-block;
+  @include s-bigger;
+  @include rem(margin-right, 8px);
+  vertical-align: middle;
+}
 
 //added
 .openSubPanel{
@@ -435,9 +481,11 @@ Search
 -------------------------- */
 .search-block {
   display: none;
+  @include media($tablet) {
   position: absolute;
   left: 0px;
   top: 32px;
+  }
   width: 100%;
   z-index: 99999;
 

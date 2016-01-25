@@ -5,7 +5,7 @@
 select,
 textarea{
   background-color: $white-base;
-  border: 1px solid $grey-light;
+  border: 1px solid transparent;
   box-sizing: border-box;
   @include appearance(none);
   @include font-type($primary-sans-serif, normal, $regular);
@@ -31,6 +31,10 @@ textarea[type="text"]{
   height: 210px;
   @include rem(margin-bottom, 12px);
   resize: vertical;
+}
+
+.form-blocks{
+  background-color: $grey-lightest;
 }
 
 .form-block{

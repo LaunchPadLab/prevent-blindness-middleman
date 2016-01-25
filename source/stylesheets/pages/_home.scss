@@ -38,8 +38,8 @@ Link Index
 -----------------------*/
 .link-index-container{
   h2{
-    border-bottom: 3px solid $magenta-base;
-    color: $magenta-base;
+    border-bottom: 3px solid $teal-base;
+    color: $teal-base;
     @include rem(margin-bottom, 15px);
     @include rem(padding-bottom, 15px);
   }
@@ -53,56 +53,12 @@ Link Index
     a{
       display: inline-block;
       @include rem(margin, 15px 0);
-      @include media($tablet){
-        //@include span-columns(4 of 12);
-        //@include omega(3n);
-      }
     }
   }
 }
 
-
 /*-----------------------
-Related Links
------------------------*/
-.related-links{
-  border-top: 1px solid $white-med;
-  display: inline-block;
-  width: 100%;
-
-  h5{
-    color: $grey-light;
-    @include media($tablet){
-      margin: 0;
-      @include span-columns(2 of 12);
-      @include rem(margin-top, 10px);
-    }
-  }
-
-  .related-links-container{
-    @include rem(padding, 20px);
-    @include media($tablet){ @include rem(padding, 40px 20px); }
-  }
-
-  ul{
-    display: inline-block;
-    @include media($tablet){ @include span-columns(10 of 12); }
-  }
-  li{
-    display: inline-block;
-    @include rem(margin, 0  10px 0 0);
-
-    a{
-      @include rem(margin, 5px 0px);
-      @include s-tiny;
-      @include media($tablet){ @include s-small; }
-    }
-  }
-}
-
-
-/*-----------------------
-Page Header
+Page Callout
 -----------------------*/
 
 .page-callout {
@@ -115,9 +71,9 @@ Page Header
   h4 a{ @include font-type($primary-slab-serif, normal, 900); color: $teal-dark; }
 
   .image-block {
-    @include background-size(cover);
-    height: 300px;
     border-bottom: 5px solid $white-base;
+    height: 300px;
+    @include background-size(cover);
 
     @include media($tablet) {
       border-bottom: none;
@@ -169,9 +125,9 @@ Page Header
     background-color: rgba(0, 0, 0, 0.2);
     color: $white-base;
     @include position(absolute, null 0px 0px 0px);
-    width: 100%;
     @include rem(padding, 12px 20px);
     opacity: 0.5;
+    width: 100%;
 
     @include media($tablet){ width: 50%; }
 
@@ -200,29 +156,53 @@ Page Header
 }
 
 /*-----------------------
-Arrow for Link
+Calendar
 -----------------------*/
+.calendar-container{
+  h3{
+    border-bottom: 3px solid $grey-base;
+    @include rem(margin-bottom, 15px);
+    @include rem(padding-bottom, 15px);
+  }
+}
 
-.arrow{
-  &:after{
-    content: "\2192";
+.date{
+  text-align: center;
+  background-color: $grey-light;
+  color: $white-base;
+  float: left;
+  @include rem(margin-right, 20px);
+  @include rem(padding, 9px 11px 6px);
+  line-height: 1;
+  text-transform: uppercase;
+
+  strong{
+    display: block;
+    font-weight: $bold;
+    @include s-large;
+  }
+}
+
+
+.calendar-blocks{
+  li{
     display: inline-block;
-    @include rem(margin-left, 7px);
+    margin: 0;
+    @include rem(margin-top, 30px);
+
+    @include media($tablet) {
+      @include span-columns(6 of 12);
+      @include omega(2n);
+    }
   }
 }
 
-/*-----------------------
-Paragraph Block
------------------------*/
-.paragraph-container{
-  @include media($tablet) {
-    @include span-columns(7 of 12);
-    @include shift(2.5);
-  }
+.event-details{
+  float: left;
+  width: calc(100% - 80px);
+
+  @include media($tablet) {  width: calc(100% - 100px); }
 }
-
-
-
 
 
 /*-----------------------
@@ -236,6 +216,7 @@ Featured Content
     height: 300px;
 
     @include media($tablet-landscape) {
+      border-bottom: 5px solid white;
       border-right: 5px solid white;
       height: 100%;
       @include position(absolute, 0 null 0 null);
@@ -323,87 +304,58 @@ Featured Content
   }
 }
 
-/*-----------------------
-Calendar
------------------------*/
-/*
-.date{
-  text-align: center;
-  background-color: $grey-base;
-  color: $white-base;
-  display: inline-block;
-  @include rem(padding, 8px 15px 5px);
-  line-height: 1;
-  text-transform: uppercase;
-  float: left;
-
-  strong{
-    display: block;
-    font-weight: $bold;
-    @include s-huge;
-  }
-}
-*/
-.calendar-container{
-  h3{
-    border-bottom: 3px solid $grey-base;
-    @include rem(margin-bottom, 15px);
-    @include rem(padding-bottom, 15px);
-  }
-}
-
-.date{
-  text-align: center;
-  background-color: $grey-light;
-  color: $white-base;
-  @include rem(padding, 9px 11px 6px);
-  line-height: 1;
-  text-transform: uppercase;
-  float: left;
-  @include rem(margin-right, 20px);
-
-  strong{
-    display: block;
-    font-weight: $bold;
-    @include s-large;
-  }
-}
-
-
-.calendar-blocks{
-  li{
-    display: inline-block;
-    margin: 0;
-    @include rem(margin-top, 30px);
-
-    @include media($tablet) {
-      @include span-columns(6 of 12);
-      @include omega(2n);
-      //@include rem(margin-top, 50px);
-    }
-  }
-}
-
-.event-details{
-  float: left;
-  width: calc(100% - 80px);
-
-  @include media($tablet) {  width: calc(100% - 100px); }
-}
 
 
 /*-----------------------
 Image Text Container
 -----------------------*/
 .intro-description{
-  background-color: $white-light;
+  background-color: $grey-lightest;
   @include rem(margin-top, 5px);
 }
 
 .image-text-container{
   border-bottom: 1px solid $white-med;
 
-  &:last-of-type{
-    border-bottom: none;
+  &:last-of-type{ border-bottom: none; }
+
+  h4{
+    border-bottom: 2px solid $grey-base;
+    display: inline-block;
+  }
+}
+
+
+
+/*-----------------------
+Map Container
+-----------------------*/
+
+.map {
+  display: none;
+
+  @include media($tablet){
+    display: block;
+    height: 100%;
+    text-align: center;
+    width: 100%;
+  }
+
+  @include media($tablet-landscape) {
+    @include span-columns(10 of 12);
+    @include shift(1);
+  }
+
+  path {
+    fill: $white-base;
+    stroke: $grey-light;
+    stroke-width: 2;
+    transition: .5s fill;
+
+    &:hover {
+      cursor: pointer;
+      fill: $teal-base;
+      stroke: $teal-base;
+    }
   }
 }

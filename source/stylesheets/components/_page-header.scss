@@ -1,9 +1,13 @@
 //Page Header
 .page-header{
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: $mobile-nav-height;
 
   @include media($tablet){
     height: 500px;
+    margin-top: $tablet-nav-height;
     position: relative;
   }
 
@@ -25,14 +29,12 @@
   }
 }
 
-
-
 /*-----------------------
 Page Header
 -----------------------*/
 
 .page-header {
-  background-color: $magenta-base;
+  background-color: $teal-base;
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -61,7 +63,6 @@ Page Header
       @include media($tablet) {
         @include span-columns(5.5 of 12);
         @include vertical-center;
-        //@include shift(6 of 12);
         right:20px;
       }
 
@@ -71,6 +72,9 @@ Page Header
   }
 }
 
+/*-----------------------
+Right Image
+-----------------------*/
 .right-image{
   .image-block {
     @include media($tablet) {
@@ -231,5 +235,19 @@ video{
     @include position(absolute, 0px 0px 0px 0px);
     opacity: 0.4;
     width: 100%;
+  }
+}
+
+/*-----------------------
+Text Only Header
+-----------------------*/
+.text-only{
+  height: inherit;
+}
+
+.home-secondary-header{
+ h1, p { color: $white-base; max-width: 700px; }
+  h1{
+    @include media($tablet-landscape){ @include s-giga; line-height: 1.1; }
   }
 }
