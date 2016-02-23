@@ -111,3 +111,19 @@ footer{
     @include rem(margin-top, 8px);
   }
 }
+
+.primary-footer .footer-block .footer-button{
+  background-color: $white-base;
+  border: none;
+  color: $purple-base;
+  float: left;
+  @include rem(padding, 8px 20px);
+  @include s-small;
+  text-align: center;
+  margin: 0;
+  width: 100%;
+  @include media($tablet) {
+    border-radius: 20em;
+    width: 150px;
+  }
+}
