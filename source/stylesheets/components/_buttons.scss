@@ -75,6 +75,7 @@
 
   // Links
   .link-#{$type}{
+    cursor: pointer;
     @include s-small;
     @include font-type($primary-sans-serif, normal, 600);
     color: $bg-1;

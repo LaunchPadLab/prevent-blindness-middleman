@@ -11,10 +11,25 @@ title: Prevent Blindness
     <div class="header-text">
       <h1>A Lifetime of Healthy Vision</h1>
       <p class="subheader">Vision should not be a barrier to learning, working, playing, or living independently.</p>
-      <a href="#" class="link-white-base video-link">Play Video</a>
+      <label for="modal-1">
+        <p class="link-white-base video-link">Play Video</p>
+      </label>
     </div>
   </div>
 </header>
+
+<div class="modal">
+  <input class="modal-state" id="modal-1" type="checkbox" />
+  <div class="modal-fade-screen">
+    <div class="modal-close" for="modal-1"><img src="images/close.svg"></div>
+    <div class="modal-inner">
+      <div class="modal-content" id="pause-video">
+        <iframe width="420" height="315" src="https://www.youtube.com/embed/_6UTr3aYz9g?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+        <!--?enablejsapi=1 is being used to pause the video when closing the modal-->
+      </div>
+    </div>
+  </div>
+</div>
 
 <div>
   <section class="image-text-container">
