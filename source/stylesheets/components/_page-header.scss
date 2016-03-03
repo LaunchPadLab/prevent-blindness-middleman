@@ -84,12 +84,12 @@ Right Image
     }
   }
 
- .text-block {
-    @include media($tablet) {
-      left:20px;
-      text-align: center;
+   .text-block {
+      @include media($tablet) {
+        left:20px;
+        text-align: center;
+      }
     }
-  }
 
   .button-black-base{
     background-color: rgba(0, 0, 0, 0.2);
@@ -99,6 +99,28 @@ Right Image
     &:hover{
       background-color: rgba(0, 0, 0, 0.3);
       opacity: 1;
+    }
+  }
+}
+
+.page-header.right-image{
+  .text-container{
+     @include media($tablet) {
+      display: inline-block;
+      height: 100%;
+      margin: 0;
+      position: relative;
+      width: 50%;
+    }
+
+   .text-block {
+      @include media($tablet) {
+        margin: 0 auto;
+        max-width: 600px;
+        width: 85%;
+      }
+
+      h1, p{ max-width: none; }
     }
   }
 }
