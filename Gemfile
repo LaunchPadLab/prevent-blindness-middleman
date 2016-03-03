@@ -16,3 +16,6 @@ gem "tzinfo-data", platforms: [:mswin, :mingw, :jruby]
 #Added Gems
 gem 'bourbon'
 gem 'neat'
+
+gem 'rake'
+gem 'middleman-gh-pages'
