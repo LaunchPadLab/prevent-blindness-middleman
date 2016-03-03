@@ -113,3 +113,19 @@ $fg-gutter: $gutter;
   &:nth-child(#{$nth}+1) { clear: none }
 }
 
+body{
+  background-color: $grey-lighter;
+
+  .full-site{
+    background-color: $white-base;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    @include center;
+    max-width: 1500px;
+    position: relative;
+  }
+
+  .full-nav{
+    @include center;
+    max-width: 1500px;
+  }
+}
