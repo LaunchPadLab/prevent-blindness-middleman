@@ -2661,49 +2661,67 @@ Right Image
     background-color: rgba(0, 0, 0, 0.3);
     opacity: 1; }
 
+@media screen and (min-width: 45em) {
+  /* line 107, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
+  .page-header.right-image .text-container {
+    display: inline-block;
+    height: 100%;
+    margin: 0;
+    position: relative;
+    width: 50%; } }
+@media screen and (min-width: 45em) {
+  /* line 116, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
+  .page-header.right-image .text-container .text-block {
+    margin: 0 auto;
+    max-width: 600px;
+    width: 85%; } }
+/* line 123, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
+.page-header.right-image .text-container .text-block h1, .page-header.right-image .text-container .text-block p {
+  max-width: none; }
+
 /*-----------------------
 Subpage Header with additional nav
 -----------------------*/
-/* line 111, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
+/* line 133, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
 .subpage-header .image-block {
   height: 300px; }
   @media screen and (min-width: 45em) {
-    /* line 111, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
+    /* line 133, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
     .subpage-header .image-block {
       height: 500px;
       width: 70%; } }
   @media screen and (min-width: 45em) {
-    /* line 119, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
+    /* line 141, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
     .subpage-header .image-block .text-block {
       right: inherit; } }
-/* line 126, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
+/* line 148, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
 .subpage-header .overlay {
   border-right: 5px solid #FFFFFF;
   width: 70%; }
 
-/* line 134, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
+/* line 156, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
 .accordion {
   z-index: 2; }
-  /* line 136, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
+  /* line 158, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
   .accordion ul.submenu {
     display: none;
     background-color: rgba(0, 0, 0, 0.2);
     padding: 20px;
     padding: 1.42857rem; }
     @media screen and (min-width: 45em) {
-      /* line 136, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
+      /* line 158, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
       .accordion ul.submenu {
         display: block;
         background-color: transparent;
         padding: 0; } }
-    /* line 147, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
+    /* line 169, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
     .accordion ul.submenu li {
       list-style: none;
       margin: 0; }
-  /* line 150, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
+  /* line 172, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
   .accordion .is-expanded {
     display: block; }
-  /* line 154, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
+  /* line 176, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
   .accordion .js-accordion-trigger {
     background-color: rgba(0, 0, 0, 0.2);
     padding: 20px;
@@ -2712,10 +2730,10 @@ Subpage Header with additional nav
     position: relative;
     width: 100%; }
     @media screen and (min-width: 45em) {
-      /* line 154, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
+      /* line 176, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
       .accordion .js-accordion-trigger {
         display: none; } }
-    /* line 163, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
+    /* line 185, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
     .accordion .js-accordion-trigger:after {
       content: "\25be";
       display: block;
@@ -2727,26 +2745,26 @@ Subpage Header with additional nav
       line-height: 21px;
       line-height: 1.5rem; }
 
-/* line 173, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
+/* line 195, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
 .secondary-links {
   background-color: #F3F3F3;
   border-top: 5px solid #FFFFFF; }
   @media screen and (min-width: 45em) {
-    /* line 173, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
+    /* line 195, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
     .secondary-links {
       background-color: transparent;
       border-top: none; } }
-  /* line 183, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
+  /* line 205, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
   .secondary-links h4 {
     opacity: 0.5; }
     @media screen and (min-width: 45em) {
-      /* line 183, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
+      /* line 205, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
       .secondary-links h4 {
         border-bottom: 2px solid #FFFFFF;
         color: #FFFFFF;
         padding-bottom: 15px;
         padding-bottom: 1.07143rem; } }
-  /* line 193, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
+  /* line 215, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
   .secondary-links a {
     color: #FFFFFF;
     display: inline-block;
@@ -2754,27 +2772,27 @@ Subpage Header with additional nav
     margin: 0.57143rem 0;
     opacity: 0.5; }
     @media screen and (min-width: 45em) {
-      /* line 193, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
+      /* line 215, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
       .secondary-links a {
         margin: 10px 0 0 0;
         margin: 0.71429rem 0 0 0; } }
-    /* line 202, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
+    /* line 224, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
     .secondary-links a:hover {
       opacity: 1; }
   @media screen and (min-width: 45em) {
-    /* line 207, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
+    /* line 229, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
     .secondary-links.text-container .text-block {
       width: 30%;
       right: 0;
       padding: 0 3%; } }
 
 @media screen and (min-width: 45em) {
-  /* line 216, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
+  /* line 238, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
   .page-header .text-container.interior-text {
     height: 100%;
     position: relative; } }
 @media screen and (min-width: 45em) {
-  /* line 222, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
+  /* line 244, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
   .page-header .text-container.interior-text .text-block {
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
@@ -2790,35 +2808,35 @@ Subpage Header with additional nav
 Video Header
 -----------------------*/
 @media screen and (min-width: 64em) and (orientation: landscape) {
-  /* line 235, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
+  /* line 257, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
   .home-header h1 {
     font-size: 60px;
     font-size: 4.28571rem;
     line-height: 1.1; } }
-/* line 239, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
+/* line 261, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
 .home-header .image-block {
   background-repeat: no-repeat;
   background-position: center top; }
   @media screen and (min-width: 45em) {
-    /* line 239, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
+    /* line 261, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
     .home-header .image-block {
       display: none; } }
 
-/* line 248, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
+/* line 270, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
 video {
   display: none; }
   @media screen and (min-width: 45em) {
-    /* line 248, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
+    /* line 270, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
     video {
       display: block;
       width: 125%; } }
   @media screen and (min-width: 64em) and (orientation: landscape) {
-    /* line 248, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
+    /* line 270, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
     video {
       width: 100%; } }
 
 @media screen and (min-width: 45em) {
-  /* line 261, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
+  /* line 283, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
   .overlay {
     background-color: #15191C;
     display: block;
@@ -2830,16 +2848,16 @@ video {
     left: 0px;
     opacity: 0.4;
     width: 100%; } }
-/* line 271, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
+/* line 293, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
 .overlay.darkened {
   opacity: 0.7; }
 
-/* line 276, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
+/* line 298, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
 .home-secondary-header .image-block {
   background-position: center top;
   background-repeat: no-repeat; }
   @media screen and (min-width: 45em) {
-    /* line 276, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
+    /* line 298, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
     .home-secondary-header .image-block {
       border: none;
       width: 100%; } }
@@ -2847,16 +2865,16 @@ video {
 /*-----------------------
 Text Only Header
 -----------------------*/
-/* line 290, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
+/* line 312, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
 .text-only {
   height: inherit; }
 
-/* line 295, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
+/* line 317, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
 .home-secondary-header h1, .home-secondary-header p {
   color: #FFFFFF;
   max-width: 700px; }
 @media screen and (min-width: 64em) and (orientation: landscape) {
-  /* line 296, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
+  /* line 318, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_page-header.scss */
   .home-secondary-header h1 {
     font-size: 60px;
     font-size: 4.28571rem;
