@@ -27,10 +27,6 @@ Description
 
   img{
     @include rem(margin-bottom, 25px);
-    @include media($tablet){
-      @include center;
-      width: 60%;
-    }
   }
 }
 
@@ -123,6 +119,8 @@ Page Callout
       }
 
       p { @include s-small; }
+
+      img{ display: none; }
 
     }
   }
@@ -253,6 +251,8 @@ Calendar
   width: calc(100% - 80px);
 
   @include media($tablet) {  width: calc(100% - 100px); }
+
+  img{ display: none; }
 }
 
 

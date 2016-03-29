@@ -53,9 +53,8 @@ h4 a{
 
 p {
   color: $black-light;
-  font-weight: normal;
   font-style: normal;
-  @include font-type($primary-sans-serif, normal, normal);
+  @include font-type($primary-sans-serif, normal, 400);
   @include s-small;
   @include rem(margin-bottom, 16px);
   letter-spacing: 0.25px;
@@ -103,7 +102,15 @@ a {
 }
 
 strong, b { @include font-type($primary-sans-serif, normal, $bold); }
-i, em { font-style: italic; font-weight: 200; }
+i, em { font-style: italic; }
+
+blockquote{
+  color: $teal-base;
+  @include s-bigger;
+  text-indent: center;
+  @include rem(margin-bottom, 16px);
+  line-height: normal;
+}
 
 /*-----------------------
 Arrow for Link

@@ -70,8 +70,6 @@ Text Block
 -----------------------*/
 .text-block{
   img{
-    @include center;
     @include rem(margin-bottom, 25px);
-    width: 60%;
   }
 }

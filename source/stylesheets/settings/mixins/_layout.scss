@@ -79,8 +79,6 @@ $page-header-offset-mobile: 90px;
   &:hover { background-size: 120%; }
 }
 
-img { width: 100%; }
-
 @mixin clickable-block {
   display: inline-block;
   height: 100%;
