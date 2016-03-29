@@ -3,7 +3,7 @@
 One column layout
 -----------------------*/
 .one-column-container{
-  .text-block{
+  .text-block, .column-block{
 
     &:first-child{  @include rem(margin-top, 0); }
     @include rem(margin-top, 30px);
