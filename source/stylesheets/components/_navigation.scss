@@ -468,6 +468,11 @@ a.hover-link{
 
   }
 
+  &.four-groups .group{
+    @include media($tablet-landscape){ @include span-columns(3 of 12); }
+
+  }
+
   &.three-groups-modified .group{
 
     &:first-child ul{

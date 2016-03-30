@@ -62,7 +62,10 @@ p {
 
   &:last-child { @include rem(margin-bottom, 0); }
 
-   @include media($tablet) {  @include s-base; }
+   a{
+      @include s-small;
+      @include media($tablet) {  @include s-base; }
+   }
 }
 
 li,
@@ -74,11 +77,18 @@ dd{
   list-style: disc;
 
   @include media($tablet) {  @include s-base; }
+
+  a{
+     @include s-small;
+     @include media($tablet) {  @include s-base; }
+  }
 }
 
 ol li{
   list-style: decimal;
 }
+
+li a { display: block; }
 
 a {
   color: $grey-base;
@@ -99,6 +109,10 @@ a {
   &:focus {
     outline: none;
   }
+
+  em{
+    @include font-type($primary-sans-serif, normal, $bold);
+  }
 }
 
 strong, b { @include font-type($primary-sans-serif, normal, $bold); }
@@ -111,6 +125,7 @@ blockquote{
   @include rem(margin-bottom, 16px);
   line-height: normal;
 }
+
 
 /*-----------------------
 Arrow for Link
