@@ -99,7 +99,10 @@ Logo
     height: 43px;
     width: inherit;
 
-    @include media($tablet-landscape){ height: 53px; }
+    @include media($tablet-landscape){
+      height: 61px;
+      vertical-align: middle;
+    }
   }
 }
 
@@ -243,11 +246,11 @@ Mobile Nav
   @include media($tablet-landscape){
     background: transparent;
     border: none;
-    height: initial;
+    height: inherit;
     overflow: hidden;
-    position: initial;
+    position: inherit;
     right: 0;
-    width: initial;
+    width: inherit;
   }
 }
 
