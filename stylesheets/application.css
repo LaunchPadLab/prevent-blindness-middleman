@@ -2016,7 +2016,7 @@ Mobile Nav
       position: absolute;
       top: 0px;
       right: 0px;
-      bottom: initial;
+      bottom: inherit;
       left: 0px;
       overflow: hidden; } }
 
