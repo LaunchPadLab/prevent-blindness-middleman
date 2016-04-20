@@ -267,7 +267,7 @@ Mobile Nav
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     height: inherit;
     @include animation(fade 0.2s linear);
-    @include position(absolute, 0px 0px initial 0px);
+    @include position(absolute, 0px 0px inherit 0px);
     overflow: hidden;
   }
 }
