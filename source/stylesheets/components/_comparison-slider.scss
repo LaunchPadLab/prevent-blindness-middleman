@@ -108,10 +108,7 @@ Main components
 }
 
 .cd-resize-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
+  @include position(absolute, 0px 0px 0px 0px);
   height: 100%;
   overflow: hidden;
   /* Force Hardware Acceleration in WebKit */

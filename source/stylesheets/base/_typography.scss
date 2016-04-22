@@ -147,3 +147,35 @@ Underline
   @include rem(margin-bottom, 15px);
   @include rem(padding-bottom, 15px);
 }
+
+/*-----------------------
+Caption
+-----------------------*/
+figcaption{
+  color: $black-light;
+  font-style: italic;
+  @include s-small;
+  line-height: normal;
+  text-align: center;
+}
+
+/*-----------------------
+Table
+-----------------------*/
+table{
+  width: 100%;
+
+  thead{
+    background-color: $white-med;
+    text-align: left;
+  }
+
+  th, td{
+    @include rem(padding, 10px);
+    border: 0.5px solid $white-med;
+  }
+
+  th{
+    border: 0.5px solid $white-dark;
+  }
+}

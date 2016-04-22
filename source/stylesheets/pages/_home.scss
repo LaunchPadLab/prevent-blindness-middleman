@@ -39,6 +39,10 @@ Callout
   display: inline-block;
   vertical-align: middle;
   width: 100%;
+
+  .arrow{
+    @include rem(margin-top, 16px);
+  }
 }
 
 /*-----------------------
@@ -206,11 +210,34 @@ Calendar
 -----------------------*/
 
 .calendar-container{
+  /*
   h3{
     border-bottom: 3px solid $grey-base;
     @include rem(margin-bottom, 15px);
     @include rem(padding-bottom, 15px);
+  }*/
+
+  .header{
+    border-bottom: 3px solid $grey-base;
+    display: inline-block;
+    @include rem(margin-bottom, 15px);
+    width: 100%;
+
+    h3{
+      @include media($tablet){
+        float: left;
+      }
+    }
+
+    a{
+      @include rem(margin-bottom, 15px);
+      @include media($tablet){
+        @include rem(margin-bottom, 0px);
+        float: right;
+      }
+    }
   }
+
 }
 
 .date{

@@ -96,12 +96,12 @@ Logo
 
   img{
     @include rem(margin, 5px 0 3px);
-    height: 43px;
+    height: 50px;
     width: inherit;
+    vertical-align: middle;
 
     @include media($tablet-landscape){
       height: 61px;
-      vertical-align: middle;
     }
   }
 }
@@ -497,6 +497,23 @@ a.hover-link{
 
    max-width: 54em;
  }
+}
+
+//IE fix
+.ie{
+  .subPanel.one-group .group li{
+     @include media($tablet-landscape){
+      width: 22%;
+      margin: 0 1.5%;
+      float: left;
+    }
+
+    a{
+       @include media($tablet-landscape){
+        width: 100%;
+      }
+    }
+  }
 }
 
 /* --------------------------
