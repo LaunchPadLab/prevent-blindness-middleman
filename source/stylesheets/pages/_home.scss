@@ -163,7 +163,7 @@ Page Callout
 
 .position-text {
   @include media($tablet-landscape){
-    transform: translateX(-100%);
+    @include transform(translateX(-100%));
   }
 }
 
@@ -172,8 +172,8 @@ Page Callout
   color: $grey-base;
 
   @include media($tablet-landscape){
-    transform: rotate(-90deg);
-    transform-origin: right top;
+    @include transform(rotate(-90deg));
+    @include transform-origin(right top);
     text-align: right;
     opacity: 0.3;
   }
@@ -209,35 +209,35 @@ Left Callout
 Calendar
 -----------------------*/
 
+/*
 .calendar-container{
-  /*
   h3{
     border-bottom: 3px solid $grey-base;
     @include rem(margin-bottom, 15px);
     @include rem(padding-bottom, 15px);
-  }*/
+  }
+}
+*/
 
-  .header{
-    border-bottom: 3px solid $grey-base;
-    display: inline-block;
-    @include rem(margin-bottom, 15px);
-    width: 100%;
+.header{
+  border-bottom: 3px solid $grey-base;
+  display: inline-block;
+  @include rem(margin-bottom, 15px);
+  width: 100%;
 
-    h3{
-      @include media($tablet){
-        float: left;
-      }
-    }
-
-    a{
-      @include rem(margin-bottom, 15px);
-      @include media($tablet){
-        @include rem(margin-bottom, 0px);
-        float: right;
-      }
+  h3{
+    @include media($tablet){
+      float: left;
     }
   }
 
+  a{
+    @include rem(margin-bottom, 15px);
+    @include media($tablet){
+      @include rem(margin-bottom, 0px);
+      float: right;
+    }
+  }
 }
 
 .date{
