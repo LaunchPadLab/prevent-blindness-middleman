@@ -3482,6 +3482,10 @@ Page Callout
 @media screen and (min-width: 64em) and (orientation: landscape) {
   /* line 165, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/pages/_home.scss */
   .position-text {
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
     transform: translateX(-100%); } }
 
 /* line 171, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/pages/_home.scss */
@@ -3491,7 +3495,15 @@ Page Callout
   @media screen and (min-width: 64em) and (orientation: landscape) {
     /* line 171, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/pages/_home.scss */
     .rotate-text {
+      -webkit-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      -o-transform: rotate(-90deg);
       transform: rotate(-90deg);
+      -webkit-transform-origin: right top;
+      -moz-transform-origin: right top;
+      -ms-transform-origin: right top;
+      -o-transform-origin: right top;
       transform-origin: right top;
       text-align: right;
       opacity: 0.3; } }
@@ -3516,34 +3528,35 @@ Left Callout
 /*-----------------------
 Calendar
 -----------------------*/
-/* line 213, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/pages/_home.scss */
-.calendar-container {
-  /*
+/*
+.calendar-container{
   h3{
     border-bottom: 3px solid $grey-base;
     @include rem(margin-bottom, 15px);
     @include rem(padding-bottom, 15px);
-  }*/ }
-  /* line 221, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/pages/_home.scss */
-  .calendar-container .header {
-    border-bottom: 3px solid #9B9B9B;
-    display: inline-block;
+  }
+}
+*/
+/* line 223, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/pages/_home.scss */
+.header {
+  border-bottom: 3px solid #9B9B9B;
+  display: inline-block;
+  margin-bottom: 15px;
+  margin-bottom: 1.07143rem;
+  width: 100%; }
+  @media screen and (min-width: 45em) {
+    /* line 229, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/pages/_home.scss */
+    .header h3 {
+      float: left; } }
+  /* line 235, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/pages/_home.scss */
+  .header a {
     margin-bottom: 15px;
-    margin-bottom: 1.07143rem;
-    width: 100%; }
+    margin-bottom: 1.07143rem; }
     @media screen and (min-width: 45em) {
-      /* line 227, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/pages/_home.scss */
-      .calendar-container .header h3 {
-        float: left; } }
-    /* line 233, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/pages/_home.scss */
-    .calendar-container .header a {
-      margin-bottom: 15px;
-      margin-bottom: 1.07143rem; }
-      @media screen and (min-width: 45em) {
-        /* line 233, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/pages/_home.scss */
-        .calendar-container .header a {
-          margin-bottom: 0px;
-          float: right; } }
+      /* line 235, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/pages/_home.scss */
+      .header a {
+        margin-bottom: 0px;
+        float: right; } }
 
 /* line 244, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/pages/_home.scss */
 .date {
