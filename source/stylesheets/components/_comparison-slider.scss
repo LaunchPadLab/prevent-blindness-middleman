@@ -149,6 +149,7 @@ Main components
 }
 
 .cd-handle {
+  @include mobile-hide;
   position: absolute;
   height: 44px;
   width: 44px;
