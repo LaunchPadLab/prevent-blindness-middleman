@@ -3077,6 +3077,7 @@ Main components
     width: 50%; } }
 /* line 151, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_comparison-slider.scss */
 .cd-handle {
+  display: none;
   position: absolute;
   height: 44px;
   width: 44px;
@@ -3095,11 +3096,15 @@ Main components
   -ms-transform: translate3d(0, 0, 0) scale(0);
   -o-transform: translate3d(0, 0, 0) scale(0);
   transform: translate3d(0, 0, 0) scale(0); }
-  /* line 167, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_comparison-slider.scss */
+  @media screen and (min-width: 45em) {
+    /* line 151, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_comparison-slider.scss */
+    .cd-handle {
+      display: block; } }
+  /* line 168, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_comparison-slider.scss */
   .cd-handle.draggable {
     /* change background color when element is active */
     background-color: #F1F1F1; }
-  /* line 172, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_comparison-slider.scss */
+  /* line 173, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_comparison-slider.scss */
   .is-visible .cd-handle {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0) scale(1);
@@ -3111,11 +3116,11 @@ Main components
     -moz-transition: -moz-transform 0.3s 0.7s, opacity 0s 0.7s;
     transition: transform 0.3s 0.7s, opacity 0s 0.7s; }
 
-/* line 181, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_comparison-slider.scss */
+/* line 182, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_comparison-slider.scss */
 .disease-image {
   height: 300px; }
   @media screen and (min-width: 45em) {
-    /* line 181, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_comparison-slider.scss */
+    /* line 182, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_comparison-slider.scss */
     .disease-image {
       height: 500px; } }
 
@@ -3275,31 +3280,33 @@ Related Links
       height: 542px; } }
 
 /* line 1, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_search.scss */
-.pager {
+.item-list .pager {
   padding: 0px 20px 40px;
-  padding: 0px 1.42857rem 2.85714rem; }
+  padding: 0px 1.42857rem 2.85714rem;
+  text-align: center; }
   @media screen and (min-width: 45em) {
     /* line 1, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_search.scss */
-    .pager {
+    .item-list .pager {
       padding: 0px 20px 80px;
       padding: 0px 1.42857rem 5.71429rem; } }
-  /* line 6, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_search.scss */
-  .pager li {
+  /* line 7, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_search.scss */
+  .item-list .pager li {
     display: inline-block; }
 
-/* line 11, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_search.scss */
+/* line 12, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_search.scss */
 .search-block form {
   display: inline;
   width: 100%; }
 
-/* line 16, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_search.scss */
+/* line 17, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_search.scss */
 .search-form {
-  background-color: #FAFAFA; }
-  /* line 19, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_search.scss */
+  background-color: #FAFAFA;
+  max-width: none; }
+  /* line 21, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_search.scss */
   .search-form .container-inline div, .search-form .container-inline label {
     display: inline-block; }
 
-/* line 25, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_search.scss */
+/* line 27, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_search.scss */
 .page-search .form-wrapper, .page-search .search-results, .page-search h2 {
   padding: 40px 20px;
   padding: 2.85714rem 1.42857rem;
@@ -3307,7 +3314,7 @@ Related Links
   margin-left: auto;
   margin-right: auto; }
   @media screen and (min-width: 45em) {
-    /* line 25, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_search.scss */
+    /* line 27, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_search.scss */
     .page-search .form-wrapper, .page-search .search-results, .page-search h2 {
       padding: 80px 20px;
       padding: 5.71429rem 1.42857rem; } }
@@ -3316,16 +3323,27 @@ Related Links
     clear: both;
     content: "";
     display: table; }
-/* line 30, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_search.scss */
+/* line 32, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_search.scss */
+.page-search h2 {
+  max-width: 1088px;
+  padding-bottom: 0px; }
+/* line 37, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_search.scss */
 .page-search .form-wrapper {
   padding: 40px 20px;
   padding: 2.85714rem 1.42857rem; }
   @media screen and (min-width: 45em) {
-    /* line 30, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_search.scss */
+    /* line 37, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_search.scss */
     .page-search .form-wrapper {
       padding: 40px 20px;
       padding: 2.85714rem 1.42857rem; } }
-/* line 35, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_search.scss */
+/* line 42, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_search.scss */
+.page-search .search-results {
+  padding-top: 0px; }
+  /* line 45, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_search.scss */
+  .page-search .search-results li {
+    margin-top: 30px;
+    margin-top: 2.14286rem; }
+/* line 50, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_search.scss */
 .page-search .page-header {
   height: inherit; }
 
