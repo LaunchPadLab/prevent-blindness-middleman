@@ -186,17 +186,22 @@ p {
   /* line 63, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
   p:last-child {
     margin-bottom: 0; }
-  /* line 65, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
+  @media screen and (min-width: 45em) {
+    /* line 54, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
+    p {
+      font-size: 17px;
+      font-size: 1.21429rem; } }
+  /* line 66, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
   p a {
     font-size: 14px;
     font-size: 1rem; }
     @media screen and (min-width: 45em) {
-      /* line 65, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
+      /* line 66, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
       p a {
         font-size: 17px;
         font-size: 1.21429rem; } }
 
-/* line 71, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
+/* line 72, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
 li,
 dd {
   color: #838383;
@@ -208,32 +213,32 @@ dd {
   line-height: 1.6;
   list-style: disc; }
   @media screen and (min-width: 45em) {
-    /* line 71, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
+    /* line 72, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
     li,
     dd {
       font-size: 17px;
       font-size: 1.21429rem; } }
-  /* line 81, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
+  /* line 82, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
   li a,
   dd a {
     font-size: 14px;
     font-size: 1rem; }
     @media screen and (min-width: 45em) {
-      /* line 81, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
+      /* line 82, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
       li a,
       dd a {
         font-size: 17px;
         font-size: 1.21429rem; } }
 
-/* line 87, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
+/* line 88, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
 ol li {
   list-style: decimal; }
 
-/* line 91, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
+/* line 92, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
 li a {
   display: block; }
 
-/* line 93, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
+/* line 94, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
 a {
   color: #9B9B9B;
   display: inline-block;
@@ -247,31 +252,31 @@ a {
   font-size: 1.14286rem;
   line-height: 1.6;
   text-decoration: none; }
-  /* line 102, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
+  /* line 103, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
   a:hover {
     color: #15191C;
     cursor: pointer;
     text-decoration: none; }
-  /* line 108, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
+  /* line 109, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
   a:active, a:focus {
     outline: none; }
-  /* line 113, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
+  /* line 114, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
   a em {
     font-family: "Roboto Condensed", sans-serif;
     font-style: normal;
     font-weight: 700; }
 
-/* line 118, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
+/* line 119, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
 strong, b {
   font-family: "Roboto Condensed", sans-serif;
   font-style: normal;
   font-weight: 700; }
 
-/* line 119, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
+/* line 120, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
 i, em {
   font-style: italic; }
 
-/* line 121, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
+/* line 122, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
 blockquote {
   color: #0AC4C4;
   font-size: 22px;
@@ -286,7 +291,7 @@ blockquote {
 /*-----------------------
 Arrow for Link
 -----------------------*/
-/* line 134, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
+/* line 135, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
 .arrow:after {
   content: "\2192";
   display: inline-block;
@@ -296,7 +301,7 @@ Arrow for Link
 /*-----------------------
 Underline
 -----------------------*/
-/* line 144, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
+/* line 145, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
 .underline {
   border-bottom: 3px solid #0AC4C4;
   color: #0AC4C4;
@@ -308,7 +313,7 @@ Underline
 /*-----------------------
 Caption
 -----------------------*/
-/* line 154, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
+/* line 155, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
 figcaption {
   color: #838383;
   font-style: italic;
@@ -320,19 +325,19 @@ figcaption {
 /*-----------------------
 Table
 -----------------------*/
-/* line 165, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
+/* line 166, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
 table {
   width: 100%; }
-  /* line 168, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
+  /* line 169, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
   table thead {
     background-color: #DEDEDE;
     text-align: left; }
-  /* line 173, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
+  /* line 174, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
   table th, table td {
     padding: 10px;
     padding: 0.71429rem;
     border: 0.5px solid #DEDEDE; }
-  /* line 178, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
+  /* line 179, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
   table th {
     border: 0.5px solid #F1F1F1; }
 
@@ -1841,7 +1846,7 @@ Sub Nav
 /* line 79, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_navigation.scss */
 .trigger-search:before {
   content: "";
-  background: url("../images/search.svg") no-repeat;
+  background: url("../img/search.svg") no-repeat;
   display: inline-block;
   margin-right: 7px;
   margin-right: 0.5rem;
@@ -3268,6 +3273,61 @@ Related Links
     /* line 55, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_modal.scss */
     .modal-content iframe {
       height: 542px; } }
+
+/* line 1, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_search.scss */
+.pager {
+  padding: 0px 20px 40px;
+  padding: 0px 1.42857rem 2.85714rem; }
+  @media screen and (min-width: 45em) {
+    /* line 1, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_search.scss */
+    .pager {
+      padding: 0px 20px 80px;
+      padding: 0px 1.42857rem 5.71429rem; } }
+  /* line 6, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_search.scss */
+  .pager li {
+    display: inline-block; }
+
+/* line 11, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_search.scss */
+.search-block form {
+  display: inline;
+  width: 100%; }
+
+/* line 16, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_search.scss */
+.search-form {
+  background-color: #FAFAFA; }
+  /* line 19, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_search.scss */
+  .search-form .container-inline div, .search-form .container-inline label {
+    display: inline-block; }
+
+/* line 25, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_search.scss */
+.page-search .form-wrapper, .page-search .search-results, .page-search h2 {
+  padding: 40px 20px;
+  padding: 2.85714rem 1.42857rem;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  @media screen and (min-width: 45em) {
+    /* line 25, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_search.scss */
+    .page-search .form-wrapper, .page-search .search-results, .page-search h2 {
+      padding: 80px 20px;
+      padding: 5.71429rem 1.42857rem; } }
+  /* line 20, /Users/moniquemarchwiany/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/bourbon-4.2.6/app/assets/stylesheets/addons/_clearfix.scss */
+  .page-search .form-wrapper::after, .page-search .search-results::after, .page-search h2::after {
+    clear: both;
+    content: "";
+    display: table; }
+/* line 30, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_search.scss */
+.page-search .form-wrapper {
+  padding: 40px 20px;
+  padding: 2.85714rem 1.42857rem; }
+  @media screen and (min-width: 45em) {
+    /* line 30, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_search.scss */
+    .page-search .form-wrapper {
+      padding: 40px 20px;
+      padding: 2.85714rem 1.42857rem; } }
+/* line 35, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_search.scss */
+.page-search .page-header {
+  height: inherit; }
 
 /*-----------------------
 Left Content
