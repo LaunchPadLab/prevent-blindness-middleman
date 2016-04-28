@@ -1,5 +1,6 @@
-.pager{
+.item-list .pager{
   @include rem(padding, 0px 20px 40px);
+  text-align: center;
 
   @include media($tablet) { @include rem(padding, 0px 20px 80px); }
 
@@ -15,6 +16,7 @@
 
 .search-form{
   background-color: $white-light;
+  max-width: none;
 
   .container-inline div, .container-inline label{
     display: inline-block;
@@ -27,9 +29,22 @@
     @include outer-container;
   }
 
+  h2{
+    max-width: 1088px;
+    @include rem(padding-bottom, 0px);
+  }
+
   .form-wrapper{
     @include rem(padding, 40px 20px);
     @include media($tablet) { @include rem(padding, 40px 20px); }
+  }
+
+  .search-results{
+    padding-top: 0px;
+
+    li{
+      @include rem(margin-top, 30px);
+    }
   }
 
   .page-header {
