@@ -1,0 +1,38 @@
+.pager{
+  @include rem(padding, 0px 20px 40px);
+
+  @include media($tablet) { @include rem(padding, 0px 20px 80px); }
+
+  li{
+    display: inline-block;
+  }
+}
+
+.search-block form{
+  display: inline;
+  width: 100%;
+}
+
+.search-form{
+  background-color: $white-light;
+
+  .container-inline div, .container-inline label{
+    display: inline-block;
+  }
+}
+
+.page-search{
+   .form-wrapper, .search-results, h2{
+    @include base-padding;
+    @include outer-container;
+  }
+
+  .form-wrapper{
+    @include rem(padding, 40px 20px);
+    @include media($tablet) { @include rem(padding, 40px 20px); }
+  }
+
+  .page-header {
+    height: inherit;
+  }
+}

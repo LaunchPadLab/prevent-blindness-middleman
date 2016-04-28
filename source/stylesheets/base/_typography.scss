@@ -61,6 +61,7 @@ p {
   line-height: 1.6;
 
   &:last-child { @include rem(margin-bottom, 0); }
+  @include media($tablet) {  @include s-base; }
 
    a{
       @include s-small;

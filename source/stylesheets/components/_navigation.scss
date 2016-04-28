@@ -78,7 +78,7 @@ Sub Nav
 
 .trigger-search:before{
   content: "";
-  background: url('../images/search.svg') no-repeat;
+  background: url('../img/search.svg') no-repeat;
   display: inline-block;
   @include rem(margin-right, 7px);
   height: 20px;
