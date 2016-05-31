@@ -1643,7 +1643,7 @@ input[type="color"], input[type="date"], input[type="datetime"], input[type="dat
 select,
 textarea {
   background-color: #FFFFFF;
-  border: 1px solid transparent;
+  border: 1px solid #F3F3F3;
   box-sizing: border-box;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1761,6 +1761,17 @@ textarea[type="text"] {
     line-height: 1.5;
     opacity: 0.6; }
 
+/* line 75, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_forms.scss */
+.node-webform form {
+  margin: 0 auto;
+  padding: 40px 20px;
+  padding: 2.85714rem 1.42857rem; }
+  @media screen and (min-width: 45em) {
+    /* line 75, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_forms.scss */
+    .node-webform form {
+      padding: 80px 20px;
+      padding: 5.71429rem 1.42857rem; } }
+
 /*-----------------------
 Full Nav
 -----------------------*/
@@ -1866,13 +1877,13 @@ Logo
   .logo img {
     margin: 5px 0 3px;
     margin: 0.35714rem 0 0.21429rem;
-    height: 50px;
+    height: 44px;
     width: inherit;
     vertical-align: middle; }
     @media screen and (min-width: 64em) and (orientation: landscape) {
       /* line 97, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_navigation.scss */
       .logo img {
-        height: 61px; } }
+        height: 54px; } }
 
 /*-----------------------
 Primary Nav
