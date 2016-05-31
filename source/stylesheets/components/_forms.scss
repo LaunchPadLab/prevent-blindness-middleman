@@ -5,7 +5,7 @@
 select,
 textarea{
   background-color: $white-base;
-  border: 1px solid transparent;
+  border: 1px solid $grey-lightest;
   box-sizing: border-box;
   @include appearance(none);
   @include font-type($primary-sans-serif, normal, $regular);
@@ -69,4 +69,10 @@ textarea[type="text"]{
     line-height: 1.5;
     opacity: 0.6;
   }
+}
+
+
+.node-webform form{
+  margin: 0 auto;
+  @include base-padding;
 }
