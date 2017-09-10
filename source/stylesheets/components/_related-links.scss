@@ -7,7 +7,7 @@ Related Links
   width: 100%;
 
   h5{
-    color: $grey-light;
+    color: $black-base;
     @include media($tablet){
       margin: 0;
       @include span-columns(2 of 12);
@@ -24,6 +24,7 @@ Related Links
     display: inline-block;
     @include media($tablet){ @include span-columns(10 of 12); }
   }
+
   li{
     display: inline-block;
     @include rem(margin, 0  10px 0 0);

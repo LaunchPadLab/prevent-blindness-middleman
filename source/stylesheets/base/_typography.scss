@@ -52,7 +52,7 @@ h4 a{
 }
 
 p {
-  color: $black-light;
+  color: $black-base;
   font-style: normal;
   @include font-type($primary-sans-serif, normal, 400);
   @include s-small;
@@ -71,7 +71,7 @@ p {
 
 li,
 dd{
-  color: $black-light;
+  color: $black-base;
   @include font-type($primary-sans-serif, normal, normal);
   @include rem(margin, 0px 0px 12px 20px);
   line-height: 1.6;
@@ -92,7 +92,7 @@ ol li{
 li a { display: block; }
 
 a {
-  color: $grey-base;
+  color: $black-base;
   display: inline-block;
   @include font-type($primary-sans-serif, normal, $bold);
   @include transition(all 0.3s ease-in-out);
