@@ -102,7 +102,7 @@ h6 {
   font-weight: 900;
   margin-bottom: 12px;
   margin-bottom: 0.85714rem;
-  color: #838383;
+  color: #525252;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   letter-spacing: 1px;
@@ -172,7 +172,7 @@ h4 a {
 
 /* line 54, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
 p {
-  color: #838383;
+  color: #525252;
   font-style: normal;
   font-family: "Roboto Condensed", sans-serif;
   font-style: normal;
@@ -204,7 +204,7 @@ p {
 /* line 72, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
 li,
 dd {
-  color: #838383;
+  color: #525252;
   font-family: "Roboto Condensed", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -240,7 +240,7 @@ li a {
 
 /* line 94, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/base/_typography.scss */
 a {
-  color: #9B9B9B;
+  color: #525252;
   display: inline-block;
   font-family: "Roboto Condensed", sans-serif;
   font-style: normal;
@@ -737,8 +737,8 @@ table {
   border-radius: 20em;
   -webkit-appearance: none;
   background: transparent;
-  border: 1px solid #B2B2B2;
-  color: #B2B2B2; }
+  border: 1px solid #838383;
+  color: #838383; }
   @media screen and (min-width: 45em) {
     /* line 53, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_buttons.scss */
     .button-grey-outline {
@@ -758,18 +758,18 @@ table {
     text-decoration: none; }
   /* line 59, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_buttons.scss */
   .button-grey-outline:hover {
-    background-color: #B2B2B2;
-    border: 1px solid #B2B2B2;
+    background-color: #838383;
+    border: 1px solid #838383;
     color: #FFFFFF;
     opacity: 1; }
   /* line 67, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_buttons.scss */
   .button-grey-outline:active {
-    background-color: #B2B2B2;
+    background-color: #838383;
     color: #f2f2f2;
-    border: 1px solid #B2B2B2; }
+    border: 1px solid #838383; }
   /* line 73, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_buttons.scss */
   .button-grey-outline:focus {
-    border: 1px solid #B2B2B2; }
+    border: 1px solid #838383; }
 
 /* line 77, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_buttons.scss */
 .link-grey-outline {
@@ -809,8 +809,8 @@ table {
   font-size: 1rem;
   border-radius: 20em;
   -webkit-appearance: none;
-  background: #838383;
-  border: 1px solid #838383;
+  background: #525252;
+  border: 1px solid #525252;
   color: #FFFFFF; }
   @media screen and (min-width: 45em) {
     /* line 53, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_buttons.scss */
@@ -852,7 +852,7 @@ table {
   font-family: "Roboto Condensed", sans-serif;
   font-style: normal;
   font-weight: 600;
-  color: #838383;
+  color: #525252;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -861,7 +861,7 @@ table {
   display: inline-block; }
   /* line 86, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_buttons.scss */
   .link-black-base:hover {
-    color: #838383;
+    color: #525252;
     opacity: 0.6; }
 
 /* line 53, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_buttons.scss */
@@ -906,12 +906,12 @@ table {
   .button-white-outline:hover {
     background-color: #FFFFFF;
     border: 1px solid #FFFFFF;
-    color: #838383;
+    color: #525252;
     opacity: 1; }
   /* line 67, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_buttons.scss */
   .button-white-outline:active {
     background-color: #FFFFFF;
-    color: #767676;
+    color: #454545;
     border: 1px solid #FFFFFF; }
   /* line 73, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_buttons.scss */
   .button-white-outline:focus {
@@ -1322,7 +1322,7 @@ table {
   -webkit-appearance: none;
   background: #FFFFFF;
   border: 1px solid #F1F1F1;
-  color: #838383; }
+  color: #525252; }
   @media screen and (min-width: 45em) {
     /* line 53, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_buttons.scss */
     .button-inverse {
@@ -1772,6 +1772,25 @@ textarea[type="text"] {
       padding: 80px 20px;
       padding: 5.71429rem 1.42857rem; } }
 
+/* line 81, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_forms.scss */
+.webform-client-form {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 700px; }
+
+/* line 86, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_forms.scss */
+.element-invisible {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px; }
+
+/* line 95, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_forms.scss */
+.top-one-column.one-column-container .webform-component input[type="color"], .top-one-column.one-column-container .webform-component input[type="date"], .top-one-column.one-column-container .webform-component input[type="datetime"], .top-one-column.one-column-container .webform-component input[type="datetime-local"], .top-one-column.one-column-container .webform-component input[type="email"], .top-one-column.one-column-container .webform-component input[type="month"], .top-one-column.one-column-container .webform-component input[type="number"], .top-one-column.one-column-container .webform-component input[type="password"], .top-one-column.one-column-container .webform-component input[type="search"], .top-one-column.one-column-container .webform-component input[type="tel"], .top-one-column.one-column-container .webform-component input[type="text"], .top-one-column.one-column-container .webform-component input[type="time"], .top-one-column.one-column-container .webform-component input[type="url"], .top-one-column.one-column-container .webform-component input[type="week"], .top-one-column.one-column-container .webform-component input:not([type]), .top-one-column.one-column-container .webform-component textarea, .top-one-column.one-column-container .webform-component select, .top-one-column.one-column-container .webform-component textarea {
+  border: 1px solid #B2B2B2 !important; }
+
 /*-----------------------
 Full Nav
 -----------------------*/
@@ -2099,7 +2118,7 @@ Mobile Nav
 /* line 297, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_navigation.scss */
 .panel a, .openSubPanel {
   border-bottom: 1px solid #DEDEDE;
-  color: #838383;
+  color: #525252;
   cursor: pointer;
   padding: 10px 20px;
   padding: 0.71429rem 1.42857rem;
@@ -2176,7 +2195,7 @@ Mobile Nav
 
 /* line 363, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_navigation.scss */
 .closeSubPanel, .closePanel {
-  background-color: #838383;
+  background-color: #525252;
   color: #FFFFFF;
   padding: 10px 20px;
   padding: 0.71429rem 1.42857rem; }
@@ -3145,7 +3164,7 @@ Related Links
   width: 100%; }
   /* line 10, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_related-links.scss */
   .related-links h5 {
-    color: #B2B2B2; }
+    color: #525252; }
     @media screen and (min-width: 45em) {
       /* line 10, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_related-links.scss */
       .related-links h5 {
@@ -3181,12 +3200,12 @@ Related Links
         /* line 89, /Users/moniquemarchwiany/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
         .related-links ul:last-child {
           margin-right: 0; } }
-  /* line 28, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_related-links.scss */
+  /* line 29, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_related-links.scss */
   .related-links li {
     display: inline-block;
     margin: 0 10px 0 0;
     margin: 0 0.71429rem 0 0; }
-    /* line 32, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_related-links.scss */
+    /* line 33, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_related-links.scss */
     .related-links li a {
       margin: 5px 0px;
       margin: 0.35714rem 0px;
@@ -3195,7 +3214,7 @@ Related Links
       line-height: 14px;
       line-height: 1rem; }
       @media screen and (min-width: 45em) {
-        /* line 32, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_related-links.scss */
+        /* line 33, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/components/_related-links.scss */
         .related-links li a {
           font-size: 14px;
           font-size: 1rem; } }
@@ -3838,7 +3857,7 @@ Image Text Container
     border-bottom: none; }
   /* line 402, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/pages/_home.scss */
   .image-text-container h4 {
-    border-bottom: 2px solid #9B9B9B;
+    border-bottom: 2px solid #525252;
     display: inline-block; }
 
 /* line 409, /Users/moniquemarchwiany/Documents/github/prevent-blindness-middleman/source/stylesheets/pages/_home.scss */
